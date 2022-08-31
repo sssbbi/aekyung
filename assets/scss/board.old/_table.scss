@@ -1,0 +1,155 @@
+@charset 'UTF-8';
+
+// 테이블커스텀
+table {
+	.col_w {
+		width: rem(120);
+
+		@include mdq-max(md) {
+			width: rem(100);
+		}
+	}
+
+	.w_150 {
+		width: rem(150);
+	}
+
+	.code {
+		padding: 5px 10px;
+		display: inline-block;
+		border: 1px solid $input-border;
+		vertical-align: middle;
+	}
+
+	.xi-volume-up,
+	.xi-file-download {
+		font-size: rem(18);
+		color: $mc;
+	}
+
+	.xi-renew {
+		font-size: rem(28);
+		color: $mc;
+	}
+
+	td.text_left {
+		text-align: left;
+	}
+
+	.xi-file-download {
+		font-size: 0 !important;
+		text-indent: -9999px;
+		width: 25px;
+		height: 25px;
+		background: url(../images/icon/down_i_color.png) no-repeat center;
+		background-size: 14px;
+		display: inline-block;
+		position: relative;
+		&::before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			border-radius: 50%;
+			margin-top: -16px;
+			margin-left: -16px;
+			transform: scale(0.3);
+			transition: all 0.3s;
+			background: transparent;
+			z-index: -1;
+		}
+
+		@include mdq-min(lg) {
+			width: 32px;
+			height: 32px;
+			&:hover {
+				background-image: url(../images/icon/down_i_white.png);
+				&::before {
+					background: $color-1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
+}
+
+.table {
+	table-layout: fixed;
+	width: 100%;
+
+	&--st1 {
+		border-top: 2px solid $color-1;
+		thead {
+			th {
+				background: #f8f8f8;
+				padding: rem(18) rem(10);
+				text-align: center;
+				border: 1px solid $gray-d;
+				border-right: 0;
+				font-size: em(18);
+				font-weight: 500;
+				letter-spacing: letterSpacing(-40);
+				line-height: 1.3;
+				&:first-child {
+					border-left: 0;
+				}
+
+				.text-sub {
+					letter-spacing: letterSpacing(-50);
+					font-weight: 600;
+				}
+			}
+		}
+		tbody {
+			th,
+			td {
+				padding: rem(18) rem(18);
+				text-align: left;
+				color: $gray-6;
+				font-size: em(18);
+				border: 1px solid $gray-d;
+				border-right: 0;
+				letter-spacing: letterSpacing(-40);
+				&:first-child {
+					border-left: 0;
+				}
+			}
+			th {
+				font-weight: 500;
+			}
+			td {
+				font-family: $font-family-sub;
+			}
+		}
+
+		@include mdq-max(xxl) {
+			thead th {
+				font-size: em(17);
+				padding: rem(15) rem(10);
+			}
+			tbody {
+				th,
+				td {
+					font-size: em(17);
+					padding: rem(15) rem(10);
+					word-break: break-all;
+				}
+			}
+		}
+		@include mdq-max(lg) {
+			thead th {
+				font-size: em(16);
+				padding: rem(13) rem(8);
+			}
+			tbody {
+				th,
+				td {
+					padding: rem(13) rem(8);
+					font-size: em(16);
+				}
+			}
+		}
+	}
+}

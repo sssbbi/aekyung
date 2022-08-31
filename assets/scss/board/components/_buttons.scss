@@ -1,0 +1,45 @@
+@charset 'UTF-8';
+
+$board-btn-transition: true;
+
+@mixin button-variant($name, $color) {
+  color: color-yiq($color);
+  border-color: $color;
+  background-color: $color;
+}
+
+@mixin button-hover() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+.board-btn {
+  display: inline-block;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  color: #666666;
+  box-sizing: border-box;
+  font-size: em(16);
+  line-height: (20/16);
+  padding: em(8) em(24);
+  max-width: 100%;
+  cursor: pointer;  
+
+  @if ($board-btn-transition) {
+    transition: all .3s ease-in-out;
+  }
+
+  @each $name, $color in $theme-colors {
+    &.board-btn-#{$name} {
+      @include button-variant($name, $color);
+  
+      @include button-hover() {
+        color: $color;
+        background-color: #fff;
+      }
+    }
+  }
+}

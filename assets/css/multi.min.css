@@ -1,0 +1,1 @@
+html[lang=ja],html[lang=zh]{word-break:break-all}html[lang=ja] body,html[lang=zh] body{word-break:break-all}html[lang=ja] .header .language-bx,html[lang=ja] .history-tab-wrap,html[lang=ja] .sub-nav--dropdown .sub-nav__home,html[lang=zh] .header .language-bx,html[lang=zh] .history-tab-wrap,html[lang=zh] .sub-nav--dropdown .sub-nav__home{word-break:keep-all}

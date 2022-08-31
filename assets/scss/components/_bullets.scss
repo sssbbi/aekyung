@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.bullet-list {
+	font-size: inherit;
+
+	@include bullet(
+		(
+			width: 13,
+			height: 12,
+			font-size: 18,
+			line-height: 1.5,
+		),
+		'../images/icon/bullet_check_icon.png'
+	);
+}

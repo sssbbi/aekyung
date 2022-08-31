@@ -1,0 +1,38 @@
+<?
+$uid = $_REQUEST['uid'];
+$tablename = $_REQUEST['tablename'];
+require_once($_SERVER['DOCUMENT_ROOT']."/INC/header.php");
+include ($_SERVER['DOCUMENT_ROOT']."/INC/tableset.php");
+
+  if($uid) {		 
+	 $row_board = get_tb_board($uid,$tablename); 
+	 if(!$row_board[uid]) {
+		 $common->error("관련된 정보가 없습니다.","previous",""); } }else{ $common->error("잘못된 접근입니다.","previous",""); } ?>
+<div class="popup pop-file-download">
+  <div class="popup-head mb-5">
+    <h1 class="popup__title text-gray-2">첨부 파일</h1>
+  </div>
+  <div class="popup-body py-5">
+    <?
+	$row_file = explode("|",$row_board['file_multi2_name']);
+	$row_file_org = explode("|",$row_board['file_multi2_org']);
+
+		for($f=0;$f<count($row_file);$f++) {
+			if($row_file[$f]) {
+			$fileadd_size =	filesize("$ROOT_PATH/$tablefile/$row_file[$f]");
+			if($fileadd_size >
+    1048576) $fileadd_sizetext = number_format(round($fileadd_size/1048576,2),2)." Mbyte"; else if($fileadd_size > 1024) $fileadd_sizetext = number_format(round($fileadd_size/1024,0))." Kbyte"; else $fileadd_sizetext = $fileadd_size." byte"; ?>
+    <a class="d-block link my-2" href="/<?=$tablefile?>/<?=$row_file[$f]?>" download="<?=$row_file_org[$f]?>">
+      <i class="xi-file-download text-color-1"></i>
+      <?=$row_file_org[$f]?>
+      (<?=$fileadd_sizetext?>)
+    </a>
+    <?
+			}
+		}
+	?>
+  </div>
+  <div class="popup-footer mt-8">
+    <button type="button" onclick="$.magnificPopup.close();" class="btn-type-01 w-100">닫기</button>
+  </div>
+</div>

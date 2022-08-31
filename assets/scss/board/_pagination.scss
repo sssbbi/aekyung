@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+$board-pagination-margin-top: em(30); // 모바일( <= 1024 )에서 위 요소와의 간격 ( margin-top )
+$board-pagination-margin-top-lg: em(68); // PC( > 1024 )에서 위 요소와의 간격 ( margin-top )
+
+$board-pagination-width: em(34); // 페이지네이션 아이템 너비
+$board-pagination-height: em(34); // 페이지네이션 아이템 높이
+
+$board-pagination-spacing: em(8); // 좌우 간격
+$board-pagination-color: #999; // 숫자 색상
+
+$board-pagination-bg-color: #fff; // 배경색
+
+$board-pagination-border-width: 1px; // border 두께
+$board-pagination-border-style: solid; // border 스타일
+$board-pagination-border-color: #ddd; // border 색상
+
+$board-pagination-color-active: $color-1; // active 색상
+$board-pagination-hover-color: #000; // hover 색상
+
+$board-pagination-arrow-font-size: em(10); // 아이콘 크기 ( px, em, rem, ... )
+$board-pagination-arrow-color: #666; // 아이콘 색상
+$board-pagination-arrow-hover-color: #000; // 아이콘 hover 색상
+
+$board-pagination-transition-timing: 0.3s; // transition 속도
+
+/* 페이징 */
+.board-pagination {
+	position: relative;
+	margin-top: $board-pagination-margin-top;
+
+	// 리스트
+	&-list {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		// 리스트 아이템
+		&__item {
+			display: block;
+			padding: 0;
+			margin-top: $board-pagination-spacing;
+		}
+
+		// 아이템 간격
+		&__item + .board-pagination-list__item {
+			margin-left: $board-pagination-spacing;
+		}
+
+		// 페이지네이션 요소
+		&__link {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: $board-pagination-width;
+			height: $board-pagination-height;
+			line-height: $board-pagination-height;
+			color: $board-pagination-color;
+			background-color: $board-pagination-bg-color;
+			border: $board-pagination-border-width $board-pagination-border-style $board-pagination-border-color;
+			box-sizing: border-box;
+			transition: all $board-pagination-transition-timing ease-in-out;
+
+			&.first,
+			&.prev,
+			&.next,
+			&.last {
+				color: $board-pagination-arrow-color;
+			}
+
+			[class*='fi-'] {
+				color: $board-pagination-arrow-color;
+				font-size: $board-pagination-arrow-font-size;
+			}
+
+			&.active {
+				text-decoration: none;
+				color: $board-pagination-color-active;
+				border-color: $board-pagination-color-active;
+				background: #fff;
+			}
+
+			&:hover {
+				color: $board-pagination-hover-color !important;
+				border-color: $board-pagination-hover-color !important;
+
+				[class*='fi-'] {
+					color: $board-pagination-arrow-hover-color;
+				}
+			}
+		}
+	}
+}
+
+@include mdq-min(lg) {
+	.board-pagination {
+		margin-top: $board-pagination-margin-top-lg;
+	}
+}

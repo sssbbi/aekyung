@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/*
+ * 1) 일반 게시판
+ * 기존 템플릿의 .table_board_for 를 변형함.
+*/ 
+
+//
+// 일반게시판 공통 스타일
+//
+
+//
+// 일반게시판 공통 스타일 변수 목록
+//
+
+$board-normal-border-top-color:     #474b53; // 테이블 최상단 border 색상
+$board-normal-border-top-style:       solid;   // 테이블 최상단 border 스타일
+$board-normal-border-top-width:       1px;     // 테이블 최상단 border 두께
+
+$board-normal-border-color:         #ddd;    // border 색상
+$board-normal-border-style:           solid;   // border 스타일
+$board-normal-border-width:           1px;     // border 두께
+
+$board-normal-padding-x:              em(16);  // 테이블 셀 좌우 여백
+$board-normal-padding-y:              em(16);  // 테이블 셀 상하 여백
+
+$board-normal-color:                #333;    // 폰트 색상
+$board-normal-link-color:           #333;    // 링크 폰트 색상
+$board-normal-link-hover-color:     #333;    // 링크 폰트 hover 색상
+$board-normal-link-hover-underline:   underline;    // 링크 hover underline
+
+$board-normal-font-size:              em(16);  // 폰트 사이즈
+$board-normal-icon-size:              em(16);  // 아이콘 사이즈 ( px, em, rem, ... )
+
+.board-normal {
+  table-layout: fixed;
+  width: 100%;
+  border-top: $board-normal-border-top-width $board-normal-border-top-style $board-normal-border-top-color;
+  word-break: break-all;
+  line-height: 1.6;
+
+  [class^=fi] {
+    font-size: $board-normal-icon-size;
+  }
+
+  thead {
+    display: none;
+  }
+
+  &, tbody, tr, th, td {
+    display: block;
+  }
+
+  tr {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: $board-normal-border-width $board-normal-border-style $board-normal-border-color;
+    padding: $board-normal-padding-x $board-normal-padding-y;
+  }
+
+  th, td {
+    font-size: $board-normal-font-size;
+    color: $board-normal-color;
+
+    a {
+      display: block;
+      color: $board-normal-link-color;
+
+      &:hover {
+        color: $board-normal-link-hover-color;
+        text-decoration: $board-normal-link-hover-underline;
+      }
+    }
+  }
+
+  @include mdq-min(lg) {
+    & {
+      display: table;
+      text-align: center;
+    }
+
+    thead {
+      display: table-header-group;
+    }
+
+    tbody {
+      display: table-row-group;
+    }
+
+    tr {
+      display: table-row;
+    }
+
+    th,
+    td {
+      padding: em(16) em(8);
+      display: table-cell;
+    }
+  }
+}
+
+// 
+// 일반게시판 타입별 스타일
+// 
+@import "normal/normal_a";
+@import "normal/normal_b";
+@import "normal/normal_c";
+@import "normal/normal_d";
+@import "normal/normal_e";

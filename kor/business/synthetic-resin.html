@@ -1,0 +1,611 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 2;
+    $P_dp2 = 2;
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../../assets/css/business.min.css" />
+	</head>
+	<body class="sub-body">
+		<? include "../include/header.html" ?>
+		<? include "../include/sub-visual.html" ?>
+		<? include "../include/sub-nav.html" ?>
+
+		<? include "product-nav.html" ?>
+
+		<main class="main sub-main pb-0" id="contents">
+			<!-- S : 제품 소개 -->
+			<section class="section">
+				<div class="container">
+					<div class="product-intro">
+						<div class="product-intro__text">
+							<h4 class="product-title--en text-sub mb-3">Synthetic Resin</h4>
+							<h1 class="product-title mb-7 mb-md-10 mb-lg-15">합성수지</h1>
+							<p class="product-description">
+								가소제의 주요원료인 무수프탈산 원가경쟁력을 바탕으로 프탈산계 가소제를 생산하고 있으며<br />
+								그 외에도 다양한 용도별로 적용이 가능한 Specialty 가소제를 생산하고 있습니다.
+							</p>
+						</div>
+						<div class="product-intro__img">
+							<!-- size : 1000 x 720 -->
+							<img src="../../assets/images/business/product_intro_1.jpg" alt="제품 타이틀 입력" />
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : 제품 소개 -->
+
+			<!-- S : 제품 분류 타이틀 영역 -->
+			<section class="section mt-15">
+				<div class="container">
+					<h3 class="common-title--h3 mb-4">제품분류</h3>
+					<div class="category-text d-flex align-items-center common-text--md mb-10">
+						<span>합성수지</span>
+						<span class="xi-angle-right px-2"></span>
+						<span>복합소재용 수지</span>
+					</div>
+				</div>
+			</section>
+			<!-- E : 제품 분류 타이틀 영역 -->
+
+			<!-- S : 4뎁스 탭 -->
+			<!-- TODO: 탭 item의 'data-href' 와 아래 상세 product-detail의 'id' 값을 일치. -->
+			<section class="section mb-15">
+				<div class="container">
+					<div class="product-tab">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide active">
+									<a class="item" data-href="#prd_DOP">DOP</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_DINP">DINP</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_MEO-P">MEO-P</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_DBP">DBP</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test1">test1</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test2">test2</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test3">test3</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test4">test4</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test5">test5</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test6">test6</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test7">test7</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test8">test8</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test9">test9</a>
+								</div>
+								<div class="swiper-slide">
+									<a class="item" data-href="#prd_test10">test10</a>
+								</div>
+							</div>
+						</div>
+
+						<button type="button" class="swiper-button swiper-button--prev" title="이전 슬라이드"></button>
+						<button type="button" class="swiper-button swiper-button--next" title="다음 슬라이드"></button>
+					</div>
+				</div>
+			</section>
+			<!-- E : 4뎁스 탭 -->
+
+			<!-- S : 4뎁스 탭 컨텐츠(상세) -->
+			<section class="section product-detail-wrap">
+				<div id="prd_DOP" class="product-detail">
+					<div class="container">
+						<div class="product-detail-box mb-20">
+							<div class="product-detail__img">
+								<!-- size : 1140 x 1140 -->
+								<img src="../../assets/images/business/product_intro_1_1.jpg" alt="제품명 입력" />
+							</div>
+							<div class="product-detail__info">
+								<p class="common-text font-weight-semibold text-sub text-color-1">Product</p>
+
+								<h1 class="product-detail__title mt-2">DOP</h1>
+
+								<div class="product-detail__description">
+									<p class="common-text--md mb-4">제품특성</p>
+									<ul class="bullet-list bullet-list--txt text-gray-7">
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+									</ul>
+
+									<p class="common-text--md mb-4 mt-10">적용용도</p>
+									<div class="text-gray-7">관리자에서 적용용도를 입력해주세요. 관리자에서 적용용도를 입력해주세요.</div>
+								</div>
+
+								<div class="download-btn-wrap mt-12">
+									<a href="" download="" class="download-btn bg-color-1">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_white.png" alt="download" />
+										</span>
+										MSDS(물질보건안전자료)
+									</a>
+									<a href="" download="" class="download-btn">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_black.png" alt="download" />
+										</span>
+										TDS(기술자료)
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<!-- S : 제품 리스트 -->
+						<div class="product-detail__list border-top py-20">
+							<h4 class="common-title--h4 mb-5">
+								복합소재용 수지 (적층용, 내식용, 난연용, 성형용 등) &gt; <br class="d-lg-none" />
+								총 <span class="text-color-1">51개</span>의 제품이 있습니다.
+							</h4>
+
+							<div class="row-scrollwrap" data-show="700">
+								<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+								<div class="row-scrollwrap__scroll">
+									<div class="row-scrollwrap__content">
+										<table class="table table--st1">
+											<colgroup>
+												<col width="20%" />
+												<col width="9%" />
+												<col width="*" />
+												<col width="18%" class="d-none d-xl-table-column" />
+												<col width="24%" class="d-table-column d-xl-none" />
+											</colgroup>
+											<tbody>
+												<!-- S : 제품 1묶음 -->
+												<tr>
+													<th rowspan="2" class="text-center">
+														<h5 class="common-title--h5 text-color-1 font-weight-medium">제품명 노출</h5>
+													</th>
+													<td class="text-center text-gray-2">특징</td>
+													<td>
+														<ul class="bullet-list bullet-list--txt font-weight-light">
+															<li class="item" data-bullet="-">특징 노출</li>
+															<li class="item" data-bullet="-">특징 노출</li>
+														</ul>
+													</td>
+													<td rowspan="2" class="">
+														<a href="" download="" class="download-btn px-0 bg-color-1 my-1">
+															<span class="icon mr-2">
+																<img src="../../assets/images/icon/down_i_white.png" alt="download" />
+															</span>
+															MSDS 다운로드
+														</a>
+														<a href="" download="" class="download-btn px-0 my-1">
+															<span class="icon mr-2">
+																<img src="../../assets/images/icon/down_i_black.png" alt="download" />
+															</span>
+															TDS 다운로드
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td class="border-left text-center text-gray-2">용도</td>
+													<td>
+														<ul class="bullet-list bullet-list--txt font-weight-light">
+															<li class="item" data-bullet="-">용도 노출</li>
+															<li class="item" data-bullet="-">용도 노출</li>
+														</ul>
+													</td>
+												</tr>
+												<!-- E : 제품 1묶음 -->
+
+												<!-- S : 제품 1묶음 -->
+												<tr>
+													<th rowspan="2" class="text-center">
+														<h5 class="common-title--h5 text-color-1 font-weight-medium">제품명 노출</h5>
+													</th>
+													<td class="text-center text-gray-2">특징</td>
+													<td>
+														<ul class="bullet-list bullet-list--txt font-weight-light">
+															<li class="item" data-bullet="-">특징 노출</li>
+															<li class="item" data-bullet="-">특징 노출</li>
+														</ul>
+													</td>
+													<td rowspan="2" class="">
+														<a href="" download="" class="download-btn px-0 bg-color-1 my-1">
+															<span class="icon mr-2">
+																<img src="../../assets/images/icon/down_i_white.png" alt="download" />
+															</span>
+															MSDS 다운로드
+														</a>
+														<a href="" download="" class="download-btn px-0 my-1">
+															<span class="icon mr-2">
+																<img src="../../assets/images/icon/down_i_black.png" alt="download" />
+															</span>
+															TDS 다운로드
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td class="border-left text-center text-gray-2">용도</td>
+													<td>
+														<ul class="bullet-list bullet-list--txt font-weight-light">
+															<li class="item" data-bullet="-">용도 노출</li>
+															<li class="item" data-bullet="-">용도 노출</li>
+														</ul>
+													</td>
+												</tr>
+												<!-- E : 제품 1묶음 -->
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- E : 제품 리스트 -->
+					</div>
+
+					<!-- S : 담당자 -->
+					<div class="pt-20 pb-30 bg-light">
+						<div class="container">
+							<div class="d-lg-flex align-items-end mb-10">
+								<h3 class="common-title--h3 mb-2 mb-lg-0">담당자 문의</h3>
+								<p class="ml-lg-5 text-gray-7">질문이나 상담은 아래의 담당자 이메일 혹은 연락처로 문의 부탁드립니다.</p>
+							</div>
+
+							<div class="person-in-charge">
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">김영철 <span class="position font-weight-light">사원</span></h4>
+										<p class="department">국내</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:youngcheol.kim@aekyung.kr">youngcheol.kim@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- E : 담당자 -->
+				</div>
+
+				<div id="prd_DINP" class="product-detail">
+					<div class="container mb-20">
+						<div class="product-detail-box">
+							<div class="product-detail__img">
+								<!-- size : 1140 x 1140 -->
+								<img src="//via.placeholder.com/1140x1140/" alt="제품명 입력" />
+							</div>
+							<div class="product-detail__info">
+								<p class="common-text font-weight-semibold text-sub text-color-1">Product</p>
+
+								<h1 class="product-detail__title mt-2">PRODUCT NAME</h1>
+
+								<div class="product-detail__description">
+									<p class="common-text--md mb-4">제품특성</p>
+									<ul class="bullet-list bullet-list--txt text-gray-7">
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+									</ul>
+
+									<p class="common-text--md mb-4 mt-10">적용용도</p>
+									<div class="text-gray-7">관리자에서 적용용도를 입력해주세요. 관리자에서 적용용도를 입력해주세요.</div>
+								</div>
+
+								<div class="download-btn-wrap mt-12">
+									<a href="" download="" class="download-btn bg-color-1">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_white.png" alt="download" />
+										</span>
+										버튼명 입력
+									</a>
+									<a href="" download="" class="download-btn">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_black.png" alt="download" />
+										</span>
+										버튼명 입력
+									</a>
+									<a href="" download="" class="download-btn">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_black.png" alt="download" />
+										</span>
+										버튼명 입력
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- S : 담당자 -->
+					<div class="pt-20 pb-30 bg-light">
+						<div class="container">
+							<div class="d-lg-flex align-items-end mb-10">
+								<h3 class="common-title--h3 mb-2 mb-lg-0">담당자 문의</h3>
+								<p class="ml-lg-5 text-gray-7">질문이나 상담은 아래의 담당자 이메일 혹은 연락처로 문의 부탁드립니다.</p>
+							</div>
+
+							<div class="person-in-charge">
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- E : 담당자 -->
+				</div>
+
+				<div id="prd_MEO-P" class="product-detail">
+					<div class="container mb-20">
+						<div class="product-detail-box">
+							<div class="product-detail__img">
+								<!-- size : 1140 x 1140 -->
+								<img src="../../images/board/no_img.jpg" alt="제품명 입력" />
+							</div>
+							<div class="product-detail__info">
+								<p class="common-text font-weight-semibold text-sub text-color-1">Product</p>
+
+								<h1 class="product-detail__title mt-2">PRODUCT NAME2</h1>
+
+								<div class="product-detail__description">
+									<p class="common-text--md mb-4">제품특성</p>
+									<ul class="bullet-list bullet-list--txt text-gray-7">
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+										<li class="item" data-bullet="&middot;">제품특성 텍스트 입력</li>
+									</ul>
+
+									<p class="common-text--md mb-4 mt-10">적용용도</p>
+									<div class="text-gray-7">관리자에서 적용용도를 입력해주세요. 관리자에서 적용용도를 입력해주세요.</div>
+								</div>
+
+								<div class="download-btn-wrap mt-12">
+									<a href="" download="" class="download-btn bg-color-1">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_white.png" alt="download" />
+										</span>
+										MSDS(물질보건안전자료)
+									</a>
+									<a href="" download="" class="download-btn">
+										<span class="icon mr-2">
+											<img src="../../assets/images/icon/down_i_black.png" alt="download" />
+										</span>
+										TDS(기술자료)
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- S : 담당자 -->
+					<div class="pt-20 pb-30 bg-light">
+						<div class="container">
+							<div class="d-lg-flex align-items-end mb-10">
+								<h3 class="common-title--h3 mb-2 mb-lg-0">담당자 문의</h3>
+								<p class="ml-lg-5 text-gray-7">질문이나 상담은 아래의 담당자 이메일 혹은 연락처로 문의 부탁드립니다.</p>
+							</div>
+
+							<div class="person-in-charge">
+								<div class="person-in-charge__box">
+									<div class="inner">
+										<span class="line line--t"></span>
+										<span class="line line--r"></span>
+										<span class="line line--b"></span>
+										<span class="line line--l"></span>
+
+										<h4 class="name mb-1">홍길동 <span class="position font-weight-light">부장</span></h4>
+										<p class="department">영남</p>
+
+										<div class="mt-6 mt-md-12 d-flex align-items-center">
+											<p>이메일 문의</p>
+											<span class="mail-icon ml-2">
+												<img src="../../assets/images/icon/mail_icon.png" alt="mail" />
+											</span>
+										</div>
+										<p class="mt-3"><a class="text-color-1 text-underline" href="mailto:gildong@aekyung.kr">gildong@aekyung.kr</a></p>
+										<p class="mt-3"><a href="tel:010.1234.5678">010.1234.5678</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- E : 담당자 -->
+				</div>
+
+				<div id="prd_DBP" class="product-detail">
+					<div class="container">prd_DBP</div>
+				</div>
+
+				<div id="prd_test1" class="product-detail">
+					<div class="container">prd_test1</div>
+				</div>
+
+				<div id="prd_test2" class="product-detail">
+					<div class="container">prd_test2</div>
+				</div>
+
+				<div id="prd_test3" class="product-detail">
+					<div class="container">prd_test3</div>
+				</div>
+
+				<div id="prd_test4" class="product-detail">
+					<div class="container">prd_test4</div>
+				</div>
+
+				<div id="prd_test5" class="product-detail">
+					<div class="container">prd_test5</div>
+				</div>
+
+				<div id="prd_test6" class="product-detail">
+					<div class="container">prd_test6</div>
+				</div>
+
+				<div id="prd_test7" class="product-detail">
+					<div class="container">prd_test7</div>
+				</div>
+
+				<div id="prd_test8" class="product-detail">
+					<div class="container">prd_test8</div>
+				</div>
+
+				<div id="prd_test9" class="product-detail">
+					<div class="container">prd_test9</div>
+				</div>
+
+				<div id="prd_test10" class="product-detail">
+					<div class="container">prd_test10</div>
+				</div>
+			</section>
+			<!-- E : 4뎁스 탭 컨텐츠(상세) -->
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+		<? include "js.html" ?>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = 1;
+    $P_dp2 = 2;
+    $P_dp3 = 4;
+    include "../include/meta.html"
+    ?>
+    <link rel="stylesheet" href="../../assets/css/company.min.css" />
+  </head>
+  <body class="sub-body company">
+    <? include "../include/header.html" ?>
+    <? include "../include/sub-visual.html" ?>
+    <? include "../include/sub-nav.html" ?>
+
+    <main class="main sub-main" id="contents">
+      <section class="section text-center mb-15 mb-md-25">
+        <div class="container">
+          <h1 class="common-title--40 font-weight-medium"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?></h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="tab tab--box mb-15">
+            <div class="tab-header">
+              <div class="tab-item">
+                <a class="link on" href="ir__data-report.html">Analyst Report</a>
+              </div>
+              <div class="tab-item">
+                <a class="link" href="ir__data-news.html">언론 보도</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- S : 검색영역 -->
+          <div class="board-search-01">
+            <form method="POST" action="?" id="searchForm">
+              <fieldset>
+                <legend class="hidden">검색</legend>
+                <select name="find_field" title="search" class="select-type-01">
+                  <option value="title">제목</option>
+                  <option value="content">내용</option>
+                </select>
+                <input type="text" title="검색어" class="input-type-01" name="find_word" value="" />
+                <input type="submit" value="검색" class="btn btn-color-01" />
+              </fieldset>
+            </form>
+          </div>
+          <!-- E : 검색영역 -->
+
+          <!-- S : 목록 -->
+          <table class="table_board_for type_d">
+            <caption>
+              <span class="hidden">일반 게시판 입니다.</span>
+            </caption>
+            <colgroup>
+              <col width="8%" />
+              <col width="*" />
+              <col width="10%" />
+              <col width="14%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">NO</th>
+                <th scope="col">제목</th>
+                <th scope="col">다운로드</th>
+                <th scope="col">게시일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- S : 등록된 게시물이 없는 경우 노출 -->
+              <tr>
+                <td class="no_data" colspan="4">등록된 게시물이 없습니다.</td>
+              </tr>
+              <!-- E : 등록된 게시물이 없는 경우 노출 -->
+              <tr class="">
+                <td>
+                  <i class="xi-volume-up" title="공지"></i>
+                </td>
+                <td class="text_left">제목이 노출됩니다.</td>
+                <td>
+                  <a href="../pop/file-download.html" class="popup-link">
+                    <i class="xi-file-download"></i>
+                  </a>
+                </td>
+                <td>2021-01-01</td>
+              </tr>
+              <tr class="">
+                <td>10</td>
+                <td class="text_left">제목이 노출됩니다.</td>
+                <td>
+                  <a href="javascript:;" download="">
+                    <i class="xi-file-download"></i>
+                  </a>
+                </td>
+                <td>2021-01-01</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- S : 목록 -->
+
+          <!-- S : 페이징 -->
+          <div class="paging-area">
+            <ul>
+              <li>
+                <a href="javascript:;" class="prev-first"><span>맨앞으로</span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="prev"><span>이전으로</span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="active">1<span></span></a>
+              </li>
+              <li>
+                <a href="javascript:;">2<span></span></a>
+              </li>
+              <li>
+                <a href="javascript:;">3<span></span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="next"><span>다음으로</span></a>
+              </li>
+              <li>
+                <a href="javascript:;" class="next-last"><span>맨뒤로</span></a>
+              </li>
+            </ul>
+          </div>
+          <!-- E : 페이징 -->
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

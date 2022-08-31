@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+// 일반게시판 타입 D
+
+.board-normal {
+  &.board-normal__d {
+    td {
+      flex: 1 0 100%;
+      max-width: 100%;
+    }  
+    
+    @include mdq-min(lg) {
+      
+    }
+  }
+}

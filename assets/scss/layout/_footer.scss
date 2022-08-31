@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+.footer {
+  position: relative;
+  // height: 155px;
+  padding: rem(50) 0;
+  background: #22272d;
+  color: #747a82;
+  font-size: 13px;
+  font-weight: 300;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    @include mdq-min(lg) {
+      padding: 0 rem(50) !important;
+    }
+  }
+  // 푸터 텍스트 구분선 스타일 샘플
+  &__txt {
+    padding-right: rem(10);
+  }
+  .policy-list {
+    flex: 0 0 auto;
+  }
+
+  .bar-span {
+    position: relative;
+    overflow: hidden;
+    left: -0.5em;
+    &__txt {
+      position: relative;
+      display: inline-block;
+      padding: 0 0.5em;
+      &:before {
+        content: '';
+        left: -1px;
+        height: 0.8em;
+        top: 50%;
+        margin-top: -0.4em;
+        position: absolute;
+        border-left: 1px solid darken(#747a82, 10%);
+      }
+    }
+  }
+
+  @include mdq-max(md) {
+    padding: rem(40) 0;
+    &__wrap {
+      flex-wrap: wrap;
+      flex-direction: initial;
+    }
+    &__txt {
+      padding-right: 0;
+      margin-top: 1em;
+    }
+    .policy-list {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.quick-menu {
+  position: fixed;
+  bottom: rem(60);
+  right: rem(60);
+  z-index: 102;
+  &.fix {
+    position: absolute;
+    bottom: calc(100% + #{rem(60)});
+  }
+  @include mdq-max(xxl) {
+    bottom: 20px;
+    right: 20px;
+    &.fix {
+      bottom: calc(100% + 20px);
+    }
+  }
+  .btn,
+  .link {
+    width: rem(52);
+    height: rem(52);
+    border-radius: 50%;
+    // TODO: 쉐도우 안보임..
+    box-shadow: 0.2em 0.2em 0.5em rgba(#000, 0.1), 0 0 0.3em rgba(#000, 0.1);
+    display: flex;
+    margin-top: rem(10);
+    @include mdq-max(lg) {
+      margin-top: rem(5);
+    }
+  }
+  .sns-link img {
+    width: 100%;
+  }
+  .btn {
+    &.top-btn {
+      background-color: #222;
+    }
+    &.sns-link__btn {
+      @include mdq-min(lg) {
+        display: none;
+      }
+      background-color: $color-1;
+      i {
+        transform: none;
+        transition: 300ms transform;
+      }
+    }
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(22);
+  }
+  @include mdq-max(lg) {
+    &.active {
+      .sns-link__btn {
+        i {
+          transform: rotate(135deg);
+        }
+      }
+    }
+    .sns-link {
+      display: none;
+    }
+  }
+}

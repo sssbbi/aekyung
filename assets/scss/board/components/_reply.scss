@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+$board-reply-border: 1px solid #ddd; //댓글영역 border
+
+$board-reply-item-border: 1px dashed #ccc; //댓글 아이템 border-top
+$board-reply-item-padding: 1rem; //댓글 아이템 상하 여백
+$board-reply-item-dp-width: 2rem; //댓글 좌측여백 width
+
+$board-reply-write-btn-padding: 0 1em; // 댓글작성 버튼 패딩
+$board-reply-write-btn-margin: 0.5em; // 댓글작성 버튼 좌측 여백
+$board-reply-write-btn-color: #fff; // 댓글작성 버튼 색상
+
+$board-reply-write-radius: 3px; //댓글작성 input, btn border-radius
+$board-reply-write-height: 3em; //댓글 작성 높이
+$board-reply-write-border: #ddd; //댓글 작성 input,textarea border color
+
+$board-reply-content-padding: 0.5em; //댓글 텍스트영역/input/textarea 여백
+
+.board-reply {
+  &__wrap {
+  }
+
+  &__write {
+    position: relative;
+    display: flex;
+    &__textarea {
+      border-radius: $board-reply-write-radius;
+      padding: $board-reply-content-padding;
+      height: $board-reply-write-height;
+      width: 100%;
+      border: 1px solid $board-reply-write-border;
+    }
+    &__btn {
+      border-radius: $board-reply-write-radius;
+      background-color: $color-1;
+      color: $board-reply-write-btn-color;
+      margin-left: $board-reply-write-btn-margin;
+      padding: $board-reply-write-btn-padding;
+      flex-shrink: 0;
+    }
+  }
+
+  &__list {
+    border-top: $board-reply-border;
+    border-bottom: $board-reply-border;
+    word-break: break-all;
+    text-align: left;
+  }
+
+  &__item {
+    position: relative;
+    padding: $board-reply-item-padding 0;
+    border-top: $board-reply-item-border;
+    &:nth-child(1) {
+      border-top: 0;
+    }
+    &__top {
+      flex-wrap: wrap;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &--reply {
+      padding-left: $board-reply-item-dp-width;
+      .icon {
+        color: #666;
+        font-size: 1.5rem;
+        text-align: right;
+        width: $board-reply-item-dp-width;
+        position: absolute;
+        left: 0;
+        top: 1rem;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    &__name {
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+    &__date {
+      margin-left: 0.5em;
+      color: #666;
+      font-size: rem(15);
+    }
+  }
+
+  &__content {
+    margin: $board-reply-content-padding 0;
+    width: 100%;
+  }
+
+  &__modify {
+    display: none;
+    margin: $board-reply-content-padding 0;
+    &__wrap {
+      display: flex;
+    }
+  }
+
+  &__command {
+    &__wrap {
+      margin-left: auto;
+    }
+    &__btn {
+      color: #333;
+      margin-left: 0.3em;
+      font-size: rem(15);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__reply {
+    display: none;
+    padding-left: $board-reply-item-dp-width;
+    position: relative;
+    .icon {
+      color: #666;
+      font-size: 1.5rem;
+      text-align: right; //center;
+      width: $board-reply-item-dp-width;
+      position: absolute;
+      left: 0;
+      top: $board-reply-item-padding;
+    }
+  }
+}
+
+// 댓글 타입별 선언
+//
+@import 'reply/reply_a';

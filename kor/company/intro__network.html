@@ -1,0 +1,159 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = 1;
+    $P_dp2 = 1;
+    $P_dp3 = 4;
+    include "../include/meta.html"
+    ?>
+    <link rel="stylesheet" href="../../assets/css/company.min.css" />
+  </head>
+  <body class="sub-body company">
+    <? include "../include/header.html" ?>
+    <? include "../include/sub-visual.html" ?>
+    <? include "../include/sub-nav.html" ?>
+
+    <main class="main sub-main" id="contents">
+      <section class="section">
+        <div class="container">
+          <div class="tab tab--box mb-15">
+            <div class="tab-header">
+              <div class="tab-item">
+                <a class="link on" href="">국내</a>
+              </div>
+              <div class="tab-item">
+                <a class="link" href="">해외</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- size: 460x260 -->
+          <div class="network-list-wrap">
+            <div class="network-list">
+              <div class="network-list__head">
+                <div class="img-bx">
+                  <img src="../../images/board/no_img.jpg" alt="" />
+                </div>
+                <div class="txt-bx">
+                  <h3 class="title mb-4 mb-lg-6">본사</h3>
+
+                  <div class="info">
+                    <div class="address mb-2 mb-lg-4">(04051) 서울특별시 구로구 공원로7 (구로동) 애경빌딩</div>
+                    <div class="row mx-n3 common-text font-weight-light mb-2 mb-lg-4">
+                      <div class="col-auto px-3">
+                        <a href="tel:02-6901-6901"><span class="pr-2">TEL</span> 02-6901-6901</a>
+                      </div>
+                      <div class="col-auto px-3"><span class="pr-2">FAX</span> 02-6901-6901</div>
+                    </div>
+
+                    <div class="task common-text font-weight-light">주요업무 텍스트 입력, 주요업무 텍스트 입력, 주요업무 텍스트 입력</div>
+
+                    <button type="button" class="btn-type-01 map-btn px-10"><i class="xi-maker mr-2"></i> <span class="text">지도 보기</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="network-list__map">
+                <div id="map1" class="map"></div>
+              </div>
+            </div>
+            <div class="network-list">
+              <div class="network-list__head">
+                <div class="img-bx">
+                  <img src="../../images/board/no_img.jpg" alt="" />
+                </div>
+                <div class="txt-bx">
+                  <h3 class="title mb-4 mb-lg-6">본사</h3>
+
+                  <div class="info">
+                    <div class="address mb-2 mb-lg-4">(04051) 서울특별시 구로구 공원로7 (구로동) 애경빌딩</div>
+                    <div class="row mx-n3 common-text font-weight-light mb-2 mb-lg-4">
+                      <div class="col-auto px-3">
+                        <a href="tel:02-6901-6901"><span class="pr-2">TEL</span> 02-6901-6901</a>
+                      </div>
+                      <div class="col-auto px-3"><span class="pr-2">FAX</span> 02-6901-6901</div>
+                    </div>
+
+                    <div class="task common-text font-weight-light">주요업무 텍스트 입력, 주요업무 텍스트 입력, 주요업무 텍스트 입력</div>
+
+                    <button type="button" class="btn-type-01 map-btn px-10"><i class="xi-maker mr-2"></i> <span class="text">지도 보기</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="network-list__map">
+                <div id="map2" class="map"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b42ce64838d3ba3c9de7f36899d7134a&libraries=services"></script>
+    <script>
+      var imageSrc = '../../assets/images/icon/marker.png',
+        imageSize = new kakao.maps.Size(216, 82),
+        imageOption = { offset: new kakao.maps.Point(108, 82) },
+        imageSizeM = new kakao.maps.Size(150, 57),
+        imageOptionM = { offset: new kakao.maps.Point(75, 57) };
+
+      // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+      if ($(window).width() > 768) {
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+      } else {
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSizeM, imageOptionM);
+      }
+
+      /* map1 */
+      var mapContainer = document.getElementById('map1'),
+        mapOption = {
+          center: new kakao.maps.LatLng(37.49795187998111, 126.89215284215184),
+          level: 2,
+        };
+      var map = new kakao.maps.Map(mapContainer, mapOption);
+      var markerPosition = new kakao.maps.LatLng(37.49795187998111, 126.89215284215184);
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage,
+      });
+      marker.setMap(map);
+
+      /* map2 */
+      var mapContainer2 = document.getElementById('map2'),
+        mapOption2 = {
+          center: new kakao.maps.LatLng(37.49795187998111, 126.89215284215184),
+          level: 2,
+        };
+      var map2 = new kakao.maps.Map(mapContainer2, mapOption2);
+      var markerPosition2 = new kakao.maps.LatLng(37.49795187998111, 126.89215284215184);
+      var marker2 = new kakao.maps.Marker({
+        position: markerPosition2,
+        image: markerImage,
+      });
+      marker2.setMap(map2);
+
+      $('.map-btn').on('click', function () {
+        //$('.network-list__head').stop(true, false).slideUp(300);
+        $(this).parents('.network-list__head').next().stop(true, false).slideToggle(300);
+        $(this).toggleClass('open');
+
+        if ($(this).hasClass('open')) {
+          $(this).find('.text').text('지도 닫기');
+          $(this).find('i').removeClass('xi-maker').addClass('xi-angle-up-min');
+        } else {
+          $(this).find('.text').text('지도 보기');
+          $(this).find('i').removeClass('xi-angle-up-min').addClass('xi-maker');
+        }
+
+        map.relayout();
+        map.setCenter(new kakao.maps.LatLng(37.49795187998111, 126.89215284215184));
+
+        map2.relayout();
+        map2.setCenter(new kakao.maps.LatLng(37.49795187998111, 126.89215284215184));
+      });
+    </script>
+  </body>
+</html>

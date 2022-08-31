@@ -1,0 +1,127 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 5;
+    $P_dp2 = 2;
+		$P_dp3 = 7;
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../../assets/css/esg.min.css" />
+	</head>
+	<body class="sub-body esg-new">
+		<? include "../include/header.html" ?>
+		<? include "../include/sub-visual.html" ?>
+		<? include "../include/sub-nav.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section">
+				<div class="container">
+					<div class="text-center mb-10 mb-md-15">
+						<h1 class="common-title--40 text-sub font-weight-medium">친환경 인증 제품</h1>
+					</div>
+				</div>
+			</section>
+
+			<section class="section section--bg fixed py-20 py-sm-30 py-lg-40" style="background-image: url(../../assets/images/esg/env__eco_bg.jpg)">
+				<div class="container text-center">
+					<div class="logo mb-8">
+						<img src="../../assets/images/esg/env__eco_icon1.png" width="94" alt="eco" />
+					</div>
+					<h3 class="common-title--34 text-white font-weight-medium"><span class="text-color-2">깨끗한 환경</span>을 위한 애경케미칼의 노력은 계속됩니다</h3>
+				</div>
+			</section>
+
+			<section class="section mt-25">
+				<div class="container">
+					<div class="row-scrollwrap" data-show="600">
+						<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+						<div class="row-scrollwrap__scroll">
+							<div class="row-scrollwrap__content">
+								<table class="table table--st1" style="border-top-color: #2ba342">
+									<colgroup>
+										<col width="14%" />
+										<col width="*" />
+										<col width="*" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>구분</th>
+											<th>RCS 인증<br />(Recycled Claim Standard)</th>
+											<th>RSPO 인증<br />(Roundtable on Sustainable Palm Oil)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="text-center">표지</th>
+											<td class="text-center">
+												<!-- 로고 사이즈 : 342 x 342 -->
+												<img src="../../assets/images/esg/env__eco_logo1.jpg" width="171" alt="logo" />
+											</td>
+											<td class="text-center">
+												<!-- 로고 사이즈 : 342 x 342 -->
+												<img src="../../assets/images/esg/env__eco_logo2.jpg" width="171" alt="logo" />
+											</td>
+										</tr>
+										<tr>
+											<th class="text-center">인증 기준</th>
+											<td class="text-center">
+												5% 이상의 리사이클 원료를 함유한 제품을 대상으로 재활용 원료 및<br class="d-none d-xl-block" />
+												이를 활용한 완제품 관리의 연속성을 보장
+											</td>
+											<td class="text-center">
+												환경을 보호하면서 사회적 수요도 충족시키는<br class="d-none d-xl-block" />
+												합당한 방식으로 생산되었다고 인증된 팜유를 원료로 사용
+											</td>
+										</tr>
+										<tr>
+											<th class="text-center">인증 효과</th>
+											<td class="text-center">
+												재활용 자재 사용을 장려하여 생산 활동으로 인한 환경적 피해를 감소시키고,<br class="d-none d-xl-block" />
+												업체의 사회적 기준 개선에 기여
+											</td>
+											<td class="text-center">
+												대규모 팜 농장 개발에 따른 열대우림 파괴와 원주민 및<br class="d-none d-xl-block" />
+												노동자에 대한 불합리한 보상 이슈를 해소하는 등 환경·노동문제를 개선
+											</td>
+										</tr>
+										<tr>
+											<th class="text-center">인증 기관</th>
+											<td class="text-center">
+												<!-- 로고 사이즈 : 450 x 126 -->
+												<img src="../../assets/images/esg/env__eco_logo3.jpg" width="225" alt="textile exchange" />
+											</td>
+											<td class="text-center">
+												<!-- 로고 사이즈 : 450 x 126 -->
+												<img src="../../assets/images/esg/env__eco_logo4.jpg" width="225" alt="RSPO" />
+											</td>
+										</tr>
+										<tr>
+											<th class="text-center">인증 제품</th>
+											<td class="text-center">불포화폴리에스테르수지</td>
+											<td class="text-center">계면활성제 원료</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center mt-20">
+						<h3 class="common-title--h3 font-weight-medium mb-14">
+							친환경 인증 제품 생산량
+							<span class="common-text--ori font-weight-normal text-gray-6">(단위 : 톤)</span>
+						</h3>
+
+						<!-- 그래프 사이즈 : 1700 x 918 (높이무관) -->
+						<img src="../../assets/images/esg/env__eco_graph.jpg" width="850" alt="graph" />
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

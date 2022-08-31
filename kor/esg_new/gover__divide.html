@@ -1,0 +1,157 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 5;
+    $P_dp2 = 4;
+		$P_dp3 = 5;
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../../assets/css/esg.min.css" />
+	</head>
+	<body class="sub-body esg-new">
+		<? include "../include/header.html" ?>
+		<? include "../include/sub-visual.html" ?>
+		<? include "../include/sub-nav.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section">
+				<div class="container">
+					<div class="text-center mb-10 mb-md-15">
+						<h1 class="common-title--40 text-sub font-weight-medium">배당 정보</h1>
+						<p class="divide-text mt-6 mt-lg-15">애경케미칼 주요 배당지표</p>
+					</div>
+
+					<div class="text-right mb-3">
+						<p class="text-gray-6">(단위: 백만원)</p>
+					</div>
+
+					<div class="row-scrollwrap" data-show="800">
+						<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+						<div class="row-scrollwrap__scroll">
+							<div class="row-scrollwrap__content">
+								<table class="table table--st1">
+									<colgroup>
+										<col width="20%" />
+										<col width="16%" />
+										<col width="*" />
+										<col width="*" />
+										<col width="*" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th rowspan="2">구분</th>
+											<th rowspan="2">주식의 종류</th>
+											<th>당기</th>
+											<th>전기</th>
+											<th>전전기</th>
+										</tr>
+										<tr>
+											<th class="font-weight-light border-left-e">제 10기 (2021년)</th>
+											<th class="font-weight-light">제 9기 (2020년)</th>
+											<th class="font-weight-light">제 8기 (2019년)</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center">주당액면가액(원)</td>
+											<td class="text-center"></td>
+											<td class="text-center">500</td>
+											<td class="text-center">500</td>
+											<td class="text-center">500</td>
+										</tr>
+										<tr>
+											<td class="text-center">(연결)당기순이익(백만원)</td>
+											<td class="text-center"></td>
+											<td class="text-center">77,289</td>
+											<td class="text-center">44,326</td>
+											<td class="text-center">30,373</td>
+										</tr>
+										<tr>
+											<td class="text-center">(별도)당기순이익(백만원)</td>
+											<td class="text-center"></td>
+											<td class="text-center">61,761</td>
+											<td class="text-center">38,613</td>
+											<td class="text-center">50,260</td>
+										</tr>
+										<tr>
+											<td class="text-center">(연결)주당순이익(년)</td>
+											<td class="text-center"></td>
+											<td class="text-center">2,302</td>
+											<td class="text-center">1,407</td>
+											<td class="text-center">966</td>
+										</tr>
+										<tr>
+											<td class="text-center">현금배당금총액(백만원)</td>
+											<td class="text-center"></td>
+											<td class="text-center">26,495</td>
+											<td class="text-center">11,047</td>
+											<td class="text-center">11,047</td>
+										</tr>
+										<tr>
+											<td class="text-center">주식배당금총액(백만원)</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+										</tr>
+										<tr>
+											<td class="text-center">(연결)현금배당성향(%)</td>
+											<td class="text-center"></td>
+											<td class="text-center">34.3</td>
+											<td class="text-center">24.9</td>
+											<td class="text-center">36.4</td>
+										</tr>
+										<tr>
+											<td class="text-center" rowspan="2">현금배당수익률(%)</td>
+											<td class="text-center">보통주</td>
+											<td class="text-center">4.9</td>
+											<td class="text-center">3.8</td>
+											<td class="text-center">4.3</td>
+										</tr>
+										<tr>
+											<td class="text-center border-left-e">우선주</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+										</tr>
+										<tr>
+											<td class="text-center" rowspan="2">주당현금배당금(원)</td>
+											<td class="text-center">보통주</td>
+											<td class="text-center">550</td>
+											<td class="text-center">350</td>
+											<td class="text-center">350</td>
+										</tr>
+										<tr>
+											<td class="text-center border-left-e">우선주</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+										</tr>
+										<tr>
+											<td class="text-center" rowspan="2">주당주식배당(주)</td>
+											<td class="text-center">보통주</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+										</tr>
+										<tr>
+											<td class="text-center border-left-e">우선주</td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+											<td class="text-center"></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

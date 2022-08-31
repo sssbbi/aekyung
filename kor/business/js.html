@@ -1,0 +1,55 @@
+<script>
+  $(window).on('load', function () {
+    var tab = $('.product-tab .swiper-slide').length;
+
+    if (tab < 10) {
+      $('.product-tab .swiper-wrapper').addClass('justify-content-center');
+    } else {
+      $('.product-tab .swiper-wrapper').removeClass('justify-content-center');
+    }
+  });
+
+  var prodTabSwiper = new Swiper('.product-tab .swiper-container', {
+    loop: false,
+    slidesPerView: 'auto',
+    slidesPerGroup: 8,
+    spaceBetween: 0,
+    centeredSlides: false,
+    slideToClickedSlide: true,
+    threshold: 50,
+    navigation: {
+      prevEl: '.product-tab .swiper-button--prev',
+      nextEl: '.product-tab .swiper-button--next',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 'auto',
+        slidesPerGroup: 3,
+      },
+      769: {
+        slidesPerView: 'auto',
+        slidesPerGroup: 4,
+      },
+      1025: {
+        slidesPerView: 'auto',
+        slidesPerGroup: 8,
+      },
+    },
+  });
+
+  $(document).ready(function () {
+    $('.product-detail:first-child').addClass('show');
+  });
+
+  prodTabSwiper.on('click', function () {
+    var clicked = prodTabSwiper.clickedSlide;
+
+    $('.product-tab .swiper-slide').removeClass('active');
+    $(clicked).addClass('active');
+
+    //console.log(prodTabSwiper.clickedSlide);
+    var activePrd = $('.product-tab .swiper-slide.active').find('.item').attr('data-href');
+    $('.product-detail').removeClass('show');
+    $(activePrd).addClass('show');
+  });
+</script>

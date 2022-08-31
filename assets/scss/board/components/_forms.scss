@@ -1,0 +1,448 @@
+@charset "UTF-8";
+
+// 
+// Board Variables
+// 
+
+$board-form-height:  em(50);
+$board-form-line-height: em(50);
+
+$board-form-font-size: em(16);
+
+$board-form-input-border-width: 1px;
+$board-form-input-border-style: solid;
+$board-form-input-border-color: #ccc;
+$board-form-input-padding-x:  em(16);
+$board-form-input-padding-y:  0;
+
+//
+// Board Forms
+// 
+
+input[type=password] {
+  font-family: sans-serif !important;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+textarea {
+  &:read-only {
+    background-color: #f5f5f5 !important;
+  }
+
+  &:disabled {
+    color: #aaa !important;
+    background-color: #ddd !important;
+
+    &::placeholder {
+      color: #aaa !important;
+    }
+  }
+}
+
+.board-form-focus {
+  position: relative;
+
+  .board-form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: $board-form-font-size;
+    height: $board-form-height;
+    line-height: $board-form-line-height;
+    color: #999;
+    transition: all .3s ease-in-out;
+  }
+
+  .board-form-input::placeholder,
+  .board-form-select::placeholder,
+  .board-form-textarea::placeholder {
+    color: transparent;
+  }
+
+  &.focus {
+    .board-form-label {
+      font-size: em(12);
+      height: em(12);
+      line-height: em(12);
+      color: $color-1;
+      transform: translateY(-150%);
+    }
+  }
+
+  &.active {
+    .board-form-label {
+      font-size: em(12);
+      height: em(12);
+      line-height: em(12);
+      color: $color-1;
+      transform: translateY(-150%);
+    }
+  }
+}
+
+
+//
+// Input
+//
+.board-form-input {
+  width: 100%;
+  height: $board-form-height;
+  font-size: $board-form-font-size;
+  border: $board-form-input-border-width $board-form-input-border-style $board-form-input-border-color;
+  padding: $board-form-input-padding-y $board-form-input-padding-x;
+
+  &::placeholder {
+    color: #999;
+  }
+
+  &:focus {
+    outline: 0;
+    border-color: $color-1;
+  }
+}
+
+
+// 
+// Textarea
+// 
+$board-form-textarea-height: auto;
+$board-form-textarea-min-height: em(200);
+$board-form-textarea-max-height: none;
+
+$board-form-textarea-padding-x: em(16);
+$board-form-textarea-padding-y: em(16);
+
+$board-form-textarea-border-width: 1px;
+$board-form-textarea-border-style: solid;
+$board-form-textarea-border-color: #ccc;
+$board-form-textarea-border-radius: 0;
+
+$board-form-textarea-placeholder-color: #999;
+
+$board-form-textarea-resize: none;
+
+.board-form-textarea {
+  width: 100%;
+  font-size: $board-form-font-size;
+  border: $board-form-textarea-border-width $board-form-textarea-border-style $board-form-textarea-border-color;
+  border-radius: $board-form-textarea-border-radius;
+  height: $board-form-textarea-height;
+  min-height: $board-form-textarea-min-height;
+  max-height: $board-form-textarea-max-height;
+  line-height: $board-form-height - ($board-form-textarea-padding-y * 2);
+  padding: $board-form-textarea-padding-y $board-form-textarea-padding-x;
+  resize: $board-form-textarea-resize;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $board-form-textarea-placeholder-color;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-1;
+  }
+}
+
+
+// 
+// Code
+// 
+.board-form-code {
+  display: inline-block;
+  font-size: em(16);
+  font-weight: 700;
+  height: em(50);
+  line-height: em(50);
+  letter-spacing: -0.05em;
+  padding: 0;
+  text-align: center;
+  border: 0;
+  background-color: $gray-d;
+  color: $gray-3;
+}
+
+// 
+// File
+// 
+.board-form-file {
+  position: relative;
+  width: 100%;
+
+  & + & {
+    margin-top: em(8);
+  }
+
+  &.board-form-file__a {
+    .board-form-file__input {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: em(50);
+      margin: 0;
+      opacity: 0;
+    }
+  
+    .board-form-file__label {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      height: em(50);
+      line-height: em(50);
+      font-weight: 400;
+      color: #495057;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 0;
+      padding: 0 em(12);
+      color: #666;
+    }
+  }
+
+  &__checkbox &__item + &__checkbox &__item {
+    margin-top: em(8);
+  }
+  
+  &__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: em(50,14);
+    line-height: em(50,14);
+    background: #ddd;
+    border: 1px solid #ddd;
+    color: #333333;
+    font-size: em(14);
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+// 
+// Checkbox
+//
+// Characters which are escaped by the escape-svg function
+$escaped-characters: (
+  ("<","%3c"),
+  (">","%3e"),
+  ("#","%23"),
+  ("(","%28"),
+  (")","%29"),
+) !default;
+
+$enable-rounded:                              true !default;
+$enable-shadows:                              false !default;
+
+$component-active-color:      $white !default;
+$component-active-bg:         theme-color("primary") !default;
+
+$input-bg:                              $white !default;
+$input-disabled-bg:                     $gray-e !default;
+
+$input-btn-border-width:      $border-width !default;
+
+$input-color:                           $gray-a !default;
+$input-border-color:                    $gray-c !default;
+$input-border-width:                    $input-btn-border-width !default;
+$input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
+
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$input-focus-bg:                        $input-bg !default;
+$input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-color:                     $input-color !default;
+$input-focus-width:                     $input-btn-focus-width !default;
+$input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+
+$board-form-checkbox-gutter:                 .5rem !default;
+$board-form-checkbox-spacer-x:               1rem !default;
+$board-form-checkbox-cursor:                 null !default;
+
+$board-form-checkbox-indicator-size:         1rem !default;
+$board-form-checkbox-indicator-bg:           $input-bg !default;
+
+$board-form-checkbox-indicator-bg-size:      50% 50% !default;
+$board-form-checkbox-indicator-box-shadow:   $input-box-shadow !default;
+$board-form-checkbox-indicator-border-color: $gray-7 !default;
+$board-form-checkbox-indicator-border-width: $input-border-width !default;
+
+$board-form-checkbox-label-color:            null !default;
+
+$board-form-checkbox-indicator-disabled-bg:          $input-disabled-bg !default;
+$board-form-checkbox-label-disabled-color:           $gray-6 !default;
+
+$board-form-checkbox-indicator-disabled-bg:          $input-disabled-bg !default;
+$board-form-checkbox-label-disabled-color:           $gray-6 !default;
+
+$board-form-checkbox-indicator-checked-color:        $component-active-color !default;
+$board-form-checkbox-indicator-checked-bg:           $component-active-bg !default;
+$board-form-checkbox-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default;
+$board-form-checkbox-indicator-checked-box-shadow:   none !default;
+$board-form-checkbox-indicator-checked-border-color: $board-form-checkbox-indicator-checked-bg !default;
+
+$board-form-checkbox-indicator-focus-box-shadow:     $input-focus-box-shadow !default;
+$board-form-checkbox-indicator-focus-border-color:   $input-focus-border-color !default;
+
+$board-form-checkbox-indicator-active-color:         $component-active-color !default;
+$board-form-checkbox-indicator-active-bg:            lighten($component-active-bg, 35%) !default;
+$board-form-checkbox-indicator-active-box-shadow:    none !default;
+$board-form-checkbox-indicator-active-border-color:  $board-form-checkbox-indicator-active-bg !default;
+
+$board-form-checkbox-indicator-border-radius:       $border-radius !default;
+$board-form-checkbox-indicator-icon-checked:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$board-form-checkbox-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/></svg>") !default;
+
+$board-form-checkbox-indicator-indeterminate-bg:           $component-active-bg !default;
+$board-form-checkbox-indicator-indeterminate-color:        $board-form-checkbox-indicator-checked-color !default;
+$board-form-checkbox-indicator-icon-indeterminate:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'><path stroke='#{$board-form-checkbox-indicator-indeterminate-color}' d='M0 2h4'/></svg>") !default;
+$board-form-checkbox-indicator-indeterminate-box-shadow:   none !default;
+$board-form-checkbox-indicator-indeterminate-border-color: $board-form-checkbox-indicator-indeterminate-bg !default;
+
+$board-form-checkbox-indicator-checked-disabled-bg:  rgba(theme-color("primary"), .5) !default;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.board-form-checkbox {
+  position: relative;
+  display: block;
+  min-height: $font-size-base * $line-height-base;
+  padding-left: $board-form-checkbox-gutter + $board-form-checkbox-indicator-size;
+}
+
+.board-form-checkbox-inline {
+  display: inline-flex;
+  margin-right: $board-form-checkbox-spacer-x;
+}
+
+.board-form-checkbox__input {
+  position: absolute;
+  left: 0;
+  z-index: -1; // Put the input behind the label so it doesn't overlay text
+  width: $board-form-checkbox-indicator-size;
+  height: ($font-size-base * $line-height-base + $board-form-checkbox-indicator-size) / 2;
+  opacity: 0;
+
+  &:checked ~ .board-form-checkbox__label::before {
+    color: $board-form-checkbox-indicator-checked-color;
+    border-color: $board-form-checkbox-indicator-checked-border-color;
+    @include gradient-bg($board-form-checkbox-indicator-checked-bg);
+    @include box-shadow($board-form-checkbox-indicator-checked-box-shadow);
+  }
+
+  &:focus ~ .board-form-checkbox__label::before {
+    // the mixin is not used here to make sure there is feedback
+    @if $enable-shadows {
+      box-shadow: $input-box-shadow, $input-focus-box-shadow;
+    } @else {
+      box-shadow: $board-form-checkbox-indicator-focus-box-shadow;
+    }
+  }
+
+  &:focus:not(:checked) ~ .board-form-checkbox__label::before {
+    border-color: $board-form-checkbox-indicator-focus-border-color;
+  }
+
+  &:not(:disabled):active ~ .board-form-checkbox__label::before {
+    color: $board-form-checkbox-indicator-active-color;
+    background-color: $board-form-checkbox-indicator-active-bg;
+    border-color: $board-form-checkbox-indicator-active-border-color;
+    @include box-shadow($board-form-checkbox-indicator-active-box-shadow);
+  }
+
+  // Use [disabled] and :disabled to work around https://github.com/twbs/bootstrap/issues/28247
+  &[disabled],
+  &:disabled {
+    ~ .board-form-checkbox__label {
+      color: $board-form-checkbox-label-disabled-color;
+
+      &::before {
+        background-color: $board-form-checkbox-indicator-disabled-bg;
+      }
+    }
+  }
+}
+
+.board-form-checkbox__label {
+  position: relative;
+  margin-bottom: 0;
+  color: $board-form-checkbox-label-color;
+  vertical-align: top;
+  cursor: $board-form-checkbox-cursor;
+
+  // Background-color and (when enabled) gradient
+  &::before {
+    position: absolute;
+    // top: ($font-size-base * $line-height-base - $board-form-checkbox-indicator-size) / 2;
+    top: 50%;
+    left: -($board-form-checkbox-gutter + $board-form-checkbox-indicator-size);
+    display: block;
+    width: $board-form-checkbox-indicator-size;
+    height: $board-form-checkbox-indicator-size;
+    pointer-events: none;
+    content: "";
+    background-color: $board-form-checkbox-indicator-bg;
+    border: $board-form-checkbox-indicator-border-color solid $board-form-checkbox-indicator-border-width;
+    @include box-shadow($board-form-checkbox-indicator-box-shadow);
+    transform: translateY(-50%);
+  }
+
+  // Foreground (icon)
+  &::after {
+    position: absolute;
+    // top: ($font-size-base * $line-height-base - $board-form-checkbox-indicator-size) / 2;
+    top: 50%;
+    left: -($board-form-checkbox-gutter + $board-form-checkbox-indicator-size);
+    display: block;
+    width: $board-form-checkbox-indicator-size;
+    height: $board-form-checkbox-indicator-size;
+    content: "";
+    background: no-repeat 50% / #{$board-form-checkbox-indicator-bg-size};
+    transform: translateY(-50%);
+  }
+}
+
+.board-form-checkbox {
+  &__label::before {
+    @include border-radius($board-form-checkbox-indicator-border-radius);
+  }
+
+  &__input:checked ~ .board-form-checkbox__label {
+    &::after {
+      background-image: escape-svg($board-form-checkbox-indicator-icon-checked);
+    }
+  }
+
+  &__input:indeterminate ~ .board-form-checkbox__label {
+    &::before {
+      border-color: $board-form-checkbox-indicator-indeterminate-border-color;
+      @include gradient-bg($board-form-checkbox-indicator-indeterminate-bg);
+      @include box-shadow($board-form-checkbox-indicator-indeterminate-box-shadow);
+    }
+    &::after {
+      background-image: escape-svg($board-form-checkbox-indicator-icon-indeterminate);
+    }
+  }
+
+  &__input:disabled {
+    &:checked ~ .board-form-checkbox__label::before {
+      background-color: $board-form-checkbox-indicator-checked-disabled-bg;
+    }
+    &:indeterminate ~ .board-form-checkbox__label::before {
+      background-color: $board-form-checkbox-indicator-checked-disabled-bg;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.board-faq {
+  &__wrap {
+    border-top: 1px solid #000;
+  }
+  &__item {
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+  //질문영역
+  &__quest {
+    color: #333;
+    display: block;
+    padding-right: 3rem;
+  }
+
+  //답변영역
+  &__answer {
+    border-top: 1px solid lighten(#ddd, 5%);
+    line-height: 1.5;
+    display: none;
+    background-color: #f9f9f9;
+  }
+}
+
+// 댓글 타입별 선언
+//
+@import 'faq/faq_a';
+@import 'faq/faq_b';

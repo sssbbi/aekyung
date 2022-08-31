@@ -1,0 +1,628 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp0 = 'main';
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+	</head>
+	<body class="main-body">
+		<? include "../include/header.html" ?>
+
+		<!-- TODO: 벤치
+    한화솔루션 :
+    다국어 선택 효과 및 전체적인 효과
+    https://www.hanwhasolutions.com/ko/
+
+    한화케미컬:
+    전체적인 레이아웃, header{제품검색, 사이트맵} copy,
+    메인비주얼 효과, 첫 단 fullpage auto scroll
+    http://hcc.hanwha.co.kr/ko/
+    -->
+
+		<main class="main fullpage" id="contents">
+			<!-- S : main-visual -->
+			<section class="section py-0 main-visual">
+				<h1 class="sr-only">메인비주얼 영역</h1>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<!-- FIXME: 영상수급 대기중 -->
+						<div class="swiper-slide item">
+							<div class="img-bx">
+								<video class="video" data-autoplay src="../../assets/video/main_video1_new.mp4" autoplay loop muted poster="../../assets/images/main/mv1.jpg"></video>
+								<!-- <video class="video" src="" autoplay loop muted poster="../../assets/images/main/mv1.jpg"></video> -->
+							</div>
+							<div class="txt-bx">
+								<div class="container">
+									<h2 class="title">
+										Global Leading <br />
+										Chemical Company
+									</h2>
+									<p class="text">
+										사업모델 고도화를 통해 케미칼 솔루션을 제안하고,<br />
+										미래 트렌드에 능동적으로 대응해 나가는 진정한 글로벌 기업으로 성장할 것입니다.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide item">
+							<div class="img-bx">
+								<video class="video" data-autoplay src="../../assets/video/main_video3_new.mp4" autoplay loop muted poster="../../assets/images/main/mv3.jpg"></video>
+								<!-- <video class="video" src="" autoplay loop muted poster="../../assets/images/main/mv2.jpg"></video> -->
+							</div>
+							<div class="txt-bx">
+								<div class="container">
+									<h2 class="title">UNICHE <span class="title--small">[ juni:k ]</span></h2>
+									<p class="text">
+										애경케미칼만의 Unique한 Chemi를 극대화하여<br />
+										모두가 행복한 세상을 만들어 나갈 것 입니다.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide item">
+							<div class="img-bx">
+								<video class="video" data-autoplay src="../../assets/video/main_video2.mp4" autoplay loop muted poster="../../assets/images/main/mv2.jpg"></video>
+								<!-- <video class="video" src="" autoplay loop muted poster="../../assets/images/main/mv3.jpg"></video> -->
+							</div>
+							<div class="txt-bx">
+								<div class="container">
+									<h2 class="title">Sustainability</h2>
+									<p class="text">지속가능한 미래를 위한 애경케미칼의 발걸음은 계속 될 것입니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-ctrl">
+						<div class="container swiper-ctrl__wrap">
+							<div class="swiper-pagination"></div>
+
+							<button type="button" class="swiper-button swiper-button--prev">
+								<i class="xi-angle-left"></i>
+							</button>
+
+							<div class="swiper-toggle">
+								<button type="button" title="재생" class="btn swiper-play" style="display: none"><i class="xi-play"></i></button>
+								<button type="button" title="정지" class="btn swiper-pause"><i class="xi-pause"></i></button>
+							</div>
+
+							<button type="button" class="swiper-button swiper-button--next">
+								<i class="xi-angle-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="scroll-down">
+					<img src="../../assets/images/main/mv-scroll.png" alt="SCROLL DOWN" />
+				</div>
+			</section>
+			<!-- E : main-visual -->
+
+			<!-- S : section -->
+			<section class="section section-scroll-auto fp-auto-height main-intro pt-lg-25">
+				<!-- S: top -->
+				<div class="main-intro__top">
+					<div class="title-bx">
+						<h1 class="title wow fadeInUp">애경케미칼</h1>
+						<p class="font-weight-light h5 common-title mt-4 wow fadeInUp">애경케미칼만이 가지는 Unique한 Chemi로 모두가 행복한 세상을 만들어 나갑니다.</p>
+					</div>
+
+					<div class="link-bx wow fadeInUp" data-wow-delay="300ms">
+						<a class="link" href="javascript:;" data-index="0">
+							<img class="img" src="../../assets/images/main/intro1.svg" alt="" />
+							<p class="title">기업정보</p>
+						</a>
+						<a class="link" href="javascript:;" data-index="1">
+							<img class="img" src="../../assets/images/main/intro2.svg" alt="" />
+							<p class="title">투자정보</p>
+						</a>
+						<a class="link" href="javascript:;" data-index="2">
+							<img class="img" src="../../assets/images/main/intro3.svg" alt="" />
+							<p class="title">ESG</p>
+						</a>
+					</div>
+				</div>
+				<!-- E: top -->
+				<!-- S: bot -->
+				<div class="main-intro__bot wow fadeInUp" data-wow-delay="300ms">
+					<div class="link-content">
+						<div class="img-bx"></div>
+						<div class="txt-bx">
+							<h2 class="title">기업정보</h2>
+							<p class="text">애경케미칼을 소개합니다</p>
+							<a href="<?=$nav_1_1_href?>" class="arrow">
+								<img src="../../assets/images/main/intro-arrow.svg" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="link-content">
+						<div class="img-bx"></div>
+						<div class="txt-bx">
+							<h2 class="title">투자정보</h2>
+							<p class="text">
+								투명한 기업지배구조를 통하여 주주의 권리를 보호하고<br />
+								이익 창출을 통하여 주주의 가치를 높이고자 노력하고 있습니다.
+							</p>
+							<a href="<?=$nav_1_2_href?>" class="arrow">
+								<img src="../../assets/images/main/intro-arrow.svg" alt="" />
+							</a>
+						</div>
+					</div>
+					<div class="link-content">
+						<div class="img-bx"></div>
+						<div class="txt-bx">
+							<h2 class="title">ESG</h2>
+							<p class="text">
+								에너지·소재 기술 기반 솔루션으로 모두에게 더 나은 미래와 지속 가능한 성장에 기여하는 애경케미칼.
+								<br />세계를 선도하는 창의적인 경쟁력을 기반으로 고객과 함께 미래를 개척해 나가는 기업이 되고자 노력하고 있습니다.
+							</p>
+							<a href="<?=$nav_4_href?>" class="arrow">
+								<img src="../../assets/images/main/intro-arrow.svg" alt="" />
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- E: bot -->
+			</section>
+			<!-- E : section -->
+			<!-- S : section -->
+			<section class="section section-scroll-auto fp-auto-height main-business">
+				<div class="container">
+					<div class="main-business__wrap">
+						<div class="title-bx">
+							<h1 class="title">사업영역</h1>
+							<p class="common-text mt-4">
+								애경케미칼 만이 가지는 Unique한 Chemi로<br />
+								모두가 행복한 세상을 만들어 나갑니다
+							</p>
+
+							<div class="link-bx">
+								<a href="javascript:;" class="link" data-index="0">가소제 분야 </a>
+								<a href="javascript:;" class="link" data-index="1">합성수지 분야 </a>
+								<a href="javascript:;" class="link" data-index="2">생활화학 분야 </a>
+								<a href="javascript:;" class="link" data-index="3">바이오/에너지 분야 </a>
+							</div>
+						</div>
+
+						<div class="swiper-bx">
+							<!-- S: tab-content : 가소제 분야  -->
+							<div class="link-content" data-index="0">
+								<h2 class="sr-only">가소제 분야</h2>
+
+								<div class="swiper-ctrl">
+									<button class="swiper-button swiper-button--prev"><i class="xi-angle-left"></i></button>
+									<button class="swiper-button swiper-button--next"><i class="xi-angle-right"></i></button>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-1.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-2.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-3.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+									</div>
+								</div>
+							</div>
+							<!-- E: tab-content : 가소제 분야  -->
+							<!-- S: tab-content : 합성수지 분야  -->
+							<div class="link-content" data-index="1">
+								<h2 class="sr-only">합성수지 분야</h2>
+
+								<div class="swiper-ctrl">
+									<button class="swiper-button swiper-button--prev"><i class="xi-angle-left"></i></button>
+									<button class="swiper-button swiper-button--next"><i class="xi-angle-right"></i></button>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-3.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-1.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-2.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-2.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+									</div>
+								</div>
+							</div>
+							<!-- E: tab-content : 합성수지 분야  -->
+							<!-- S: tab-content : 생활화학 분야  -->
+							<div class="link-content" data-index="2">
+								<h2 class="sr-only">생활화학 분야</h2>
+
+								<div class="swiper-ctrl">
+									<button class="swiper-button swiper-button--prev"><i class="xi-angle-left"></i></button>
+									<button class="swiper-button swiper-button--next"><i class="xi-angle-right"></i></button>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-2.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../assets/images/main/busi1-1.png" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+									</div>
+								</div>
+							</div>
+							<!-- E: tab-content : 생활화학 분야  -->
+							<!-- S: tab-content : 바이오/에너지 분야  -->
+							<div class="link-content" data-index="3">
+								<h2 class="sr-only">바이오/에너지 분야</h2>
+
+								<div class="swiper-ctrl">
+									<button class="swiper-button swiper-button--prev"><i class="xi-angle-left"></i></button>
+									<button class="swiper-button swiper-button--next"><i class="xi-angle-right"></i></button>
+									<div class="swiper-pagination"></div>
+								</div>
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="" class="link">
+												<div class="img-bx"><img src="../../images/board/no_img.jpg" alt="" /></div>
+												<div class="txt-bx">
+													<h3 class="title">무수프탈산 (Phthalic Anhydride)</h3>
+													<p class="text">무수프탈산은 가소제, 불포화폴리에스테르수지, 페인트 등의 주원료로 사용되고 있습니다. </p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+									</div>
+								</div>
+							</div>
+							<!-- E: tab-content : 바이오/에너지 분야  -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+			<!-- S : section -->
+			<section class="section section-scroll-auto fp-auto-height main-news">
+				<div class="container">
+					<div class="title-bx text-center">
+						<h1 class="title">NEWS</h1>
+						<p class="common-text mt-4">애경케미칼의 다양한 소식을 전해드립니다.</p>
+					</div>
+
+					<div class="tab" data-tab="true" data-tab-order="0" data-tab-active="on" data-tab-index="0" data-css="true">
+						<div class="tab-header" data-tab-header="">
+							<div class="tab-item">
+								<a class="link" data-tab-item="">뉴스기사</a>
+							</div>
+							<div class="tab-item">
+								<a class="link" data-tab-item="">홍보센터</a>
+							</div>
+						</div>
+						<div class="tab-body" data-tab-body="">
+							<!-- 뉴스기사 -->
+							<div class="tab-content" data-tab-content="">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<?php for($i=1; $i<8; $i++){?>
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="../intro/pr.html" class="link">
+												<div class="img-bx"><img src="../../images/board/no_img.jpg" alt="" /></div>
+												<div class="txt-bx">
+													<p class="name">신문사</p>
+													<p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, reprehenderit.</p>
+													<p class="date">2021.10.14</p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<?php }?>
+									</div>
+								</div>
+							</div>
+							<!-- 뉴스기사 -->
+							<!-- 홍보센터 -->
+							<div class="tab-content" data-tab-content="">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<?php for($i=1; $i<3; $i++){?>
+										<!-- S: item -->
+										<div class="swiper-slide item">
+											<a href="../intro/pr-center.html" class="link">
+												<div class="img-bx"><img src="../../images/board/no_img.jpg" alt="default image" /></div>
+												<div class="txt-bx">
+													<p class="name">신문사</p>
+													<p class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, reprehenderit.</p>
+													<p class="date">2021.10.14</p>
+												</div>
+											</a>
+										</div>
+										<!-- E: item -->
+										<?php }?>
+									</div>
+								</div>
+							</div>
+							<!-- 홍보센터 -->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- E : section -->
+
+			<!-- S : section -->
+			<section class="section section-scroll-auto fp-auto-height">
+				<? include "../include/footer.html" ?>
+			</section>
+			<!-- E : section -->
+		</main>
+
+		<? include "../include/js.html" ?>
+		<script>
+			$('.product-search-btn').on('click', function () {
+				//제품검색 창 ACTIVE되었을때 풀페이지 스크롤 막기
+				if ($(this).hasClass('active')) {
+					fullpage_api.setAllowScrolling(true);
+				} else {
+					fullpage_api.setAllowScrolling(false);
+				}
+			});
+
+			// 메인비주얼 SWIPER
+			var visualSwiper = new Swiper('.main-visual  .swiper-container', {
+				loop: true,
+				slidesPerView: 1,
+				speed: 1000,
+				// simulateTouch: false,
+				autoplay: {
+					delay: 15000,
+					waitForTransition: false,
+					// disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.main-visual .swiper-pagination',
+					type: 'fraction',
+				},
+				navigation: {
+					nextEl: '.main-visual .swiper-button--next',
+					prevEl: '.main-visual .swiper-button--prev',
+				},
+
+				on: {
+					slideChange: function (swiper) {
+						//console.log('swiper initialized');
+						//var prevVideo = $('[data-swiper-slide-index=' + this.previousIndex + ']').find('video');
+						var currentVideo = $('[data-swiper-slide-index=' + this.realIndex + ']').find('video');
+						//prevVideo.trigger('pause');
+						currentVideo.trigger('play');
+					},
+				},
+			});
+
+			/* GET ALL VIDEOS */
+			var sliderVideos = $('.main-visual .swiper-slide video');
+
+			/* SWIPER API - Event will be fired after animation to other slide (next or previous) */
+			visualSwiper.on('slideChange', function () {
+				// console.log('slide changed');
+				/* stop all videos (currentTime buggy without this loop idea) */
+				sliderVideos.each(function (index) {
+					this.currentTime = 0;
+				});
+
+				/* SWIPER GET CURRENT AND PREV SLIDE (AND VIDEO INSIDE) */
+				var prevVideo = $('[data-swiper-slide-index=' + this.previousIndex + ']').find('video');
+				var currentVideo = $('[data-swiper-slide-index=' + this.realIndex + ']').find('video');
+				prevVideo.trigger('stop');
+				currentVideo.trigger('play');
+			});
+
+			// SWIPER CTRL: 일시정지/재생
+			$('.main-visual .swiper-play').hide();
+			$('.main-visual .swiper-pause').on('click', function () {
+				visualSwiper.autoplay.stop();
+				$('.main-visual .swiper-play').show();
+				$(this).hide();
+			});
+			$('.main-visual .swiper-play').on('click', function () {
+				visualSwiper.autoplay.start();
+				$('.main-visual .swiper-pause').show();
+				$(this).hide();
+			});
+
+			// 메인 INTRO 탭
+			$('.main-intro').each(function () {
+				var link = $(this).find('.link-bx .link'),
+					content = $(this).find('.link-content');
+				link.eq(0).addClass('active');
+				content.eq(0).addClass('active');
+
+				$(link).on('click', function () {
+					var eq = $(this).attr('data-index');
+					link.removeClass('active');
+					content.removeClass('active');
+					$(this).addClass('active');
+					content.eq(eq).addClass('active');
+				});
+			});
+
+			// 메인 BUSINESS 탭
+			$('.main-business').each(function () {
+				var link = $(this).find('.link-bx .link'),
+					content = $(this).find('.link-content');
+				link.eq(0).addClass('active');
+				content.eq(0).addClass('active');
+
+				$(link).on('click', function () {
+					var eq = $(this).attr('data-index');
+					link.removeClass('active');
+					content.removeClass('active');
+					$(this).addClass('active');
+					content.eq(eq).addClass('active');
+				});
+			});
+
+			// 메인 BUSINESS SWIPER
+			$('.main-business .link-content').each(function (index, element) {
+				var $this = $(this);
+				$this.addClass('link-content--' + index);
+				$this.find('.swiper-button--prev').addClass('swiper-button-' + index);
+				$this.find('.swiper-button--next').addClass('swiper-button-' + index);
+				$this.find('.swiper-pagination').addClass('swiper-pagination-' + index);
+
+				var businessSwiper = new Swiper('.link-content--' + index + '  .swiper-container', {
+					loop: false,
+					spaceBetween: 20,
+					width: 300,
+					navigation: {
+						prevEl: '.swiper-button--prev.swiper-button-' + index,
+						nextEl: '.swiper-button--next.swiper-button-' + index,
+					},
+					pagination: {
+						el: '.swiper-pagination-' + index,
+						type: 'fraction',
+					},
+					breakpoints: {
+						769: {
+							loop: false,
+							spaceBetween: 40,
+							width: 460,
+						},
+					},
+				});
+			});
+
+			// NEWS SWIPER
+			var newsSwiper = new Swiper('.main-news .swiper-container', {
+				loop: true,
+				slidesPerView: 1,
+				spaceBetween: 10,
+				centeredSlides: true,
+				autoplay: {
+					delay: 3000,
+				},
+				breakpoints: {
+					578: {
+						centeredSlides: false,
+						slidesPerView: 2,
+					},
+					769: {
+						centeredSlides: false,
+						slidesPerView: 3,
+					},
+					1025: {
+						centeredSlides: false,
+						slidesPerView: 4,
+					},
+				},
+			});
+
+			var mainFullpage = new fullpage('.fullpage', {
+				licenseKey: 'F67168A3-4AB64A38-A211B922-2DB1C3AC',
+				scrollBar: true,
+				fixedElements: '#header',
+				// paddingTop: '100px', //142px
+				responsiveWidth: 1400,
+				responsiveHeight: 850,
+				scrollingSpeed: 1000,
+				easing: 'easeInOutCubic',
+				easingcss3: 'ease',
+				anchors: ['index', 'intro', 'business', 'news'],
+
+				// CASE1: 전체 스크롤 효과 : 첫단만 스크롤 했을때 UP방향 스크롤동작이 버벅임+ 전체 단 이동 들어가도 괜찮아보여서 전체적용 해놨습니다.
+				normalScrollElements: '.scrollbar-outer',
+				//
+				// CASE2:첫번째 단만 스크롤효과 (벤치:한화케미컬과 동일한 효과)
+				// normalScrollElements: '.section-scroll-auto, .scrollbar-outer',
+				// onLeave: function (origin, destination, direction) {
+				//   if (origin.index == 1 && direction == 'up') {
+				//     $('html,body')
+				//       .stop()
+				//       .animate({ scrollTop: $('body').offset().top }, 1000);
+				//   }
+				// },
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.board-select-1 {
+  border: 1px solid #ccc;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  vertical-align: middle;
+  background: #fff;
+  -webkit-border-radius: 0;
+  resize: none;
+  text-indent: 5px;
+  font-size: em(14);
+  background: {
+    color: #fff;
+    image: url(../images/icon/sel_i.png);
+    repeat: no-repeat;
+    position: center;
+    size: 20px auto;
+  };
+  appearance: none;
+  padding-left: em(12);
+}
+
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand {
+  display: none;
+}

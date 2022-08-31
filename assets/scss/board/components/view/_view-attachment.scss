@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@mixin board-view-attachment(){
+  .board-view-attachment {
+    &-title {
+      margin-bottom: em(8);
+    }
+  
+    &-item + .board-view-attachment-item {
+      margin-top: em(4);
+    }
+  
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      padding: em(4) em(16);
+      color: #333;
+      border: 1px solid #ddd;
+      
+      [class*=fi-] {
+        font-size: em(14);
+        margin-right: em(10, 14);
+      }
+    }
+  
+    @include mdq-min(lg) {
+      &-box {
+        display: flex;
+        align-items: center;
+      }
+    
+      &-title {
+        margin-bottom: 0;
+        padding-right: em(28);
+      }
+    }
+  }
+}

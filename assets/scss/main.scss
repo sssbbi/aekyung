@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+.section-scroll-auto {
+  &,
+  .fp-tableCell {
+    height: auto !important;
+  }
+}
+
+@import 'main/_visual.scss';
+@import 'main/_intro.scss';
+@import 'main/_business.scss';
+@import 'main/_news.scss';

@@ -1,0 +1,56 @@
+<!-- S : 인재채용 페이지 일때 -->
+<?if($P_dp1 == '3'){?>
+<div class="sub-visual">
+	<div class="sub-visual__bg __recruit" style="background-image: url(../../assets/images/sub/visual_<?=$P_dp1?>_<?=$P_dp2?>.jpg)"></div>
+	<div class="sub-visual__wrapper __recruit container">
+		<? if ($P_dp2 == '3' && $P_dp3 == '1') {?>
+		<h1 class="sub-visual__title __small mt-0 wow fadeInUp">채용 프로세스</h1>
+		<p class="sub-visual__desc wow fadeInUp" style="animation-delay: 0.2s">
+			다양한 직무에 적합한 역량을 갖춘 인재를<br />
+			선발하기 위한 채용 절차를 소개합니다.
+		</p>
+		<?}else if ($P_dp2 == '3' && $P_dp3 == '2') {?>
+		<h1 class="sub-visual__title __small mt-0 wow fadeInUp">채용 공고확인</h1>
+		<?}else{?>
+		<h1 class="sub-visual__title __small mt-0 wow fadeInUp">
+			애경케미칼은<br class="d-lg-none" />
+			이렇게 일합니다
+		</h1>
+		<p class="sub-visual__desc wow fadeInUp" style="animation-delay: 0.2s">애경케미칼이 원하는 인재상 바로 당신입니다.</p>
+		<?}?>
+	</div>
+</div>
+<!-- E : 인재채용 페이지 일때 -->
+
+<!-- S : ESG 페이지 일때 -->
+<?}else if($P_dp1 == '4' || $P_dp1 == '5'){?>
+<div class="sub-visual">
+	<div class="sub-visual__bg __zoom" style="background-image: url(../../assets/images/sub/visual_<?=$P_dp1?>.jpg)"></div>
+	<div class="sub-visual__wrapper container">
+		<h1 class="sub-visual__title wow fadeInUp"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+		<p class="sub-visual__txt __large wow fadeInUp" style="animation-delay: 0.2s">
+			<?=${nav_.$P_dp1._.$P_dp2._text}?>
+		</p>
+	</div>
+</div>
+<!-- E : ESG 페이지 일때 -->
+
+<?}else{?>
+
+<div class="sub-visual">
+	<?if($P_dp1 == '1'){?>
+	<div class="sub-visual__bg __zoom" style="background-image: url(../../assets/images/sub/visual_<?=$P_dp1?>_<?=$P_dp2?>.jpg)"></div>
+	<?}else{?>
+	<div class="sub-visual__bg __zoom" style="background-image: url(../../assets/images/sub/visual_<?=$P_dp1?>.jpg)"></div>
+	<?}?>
+	<div class="sub-visual__wrapper container">
+		<?if($P_dp2 == null){?>
+		<p class="sub-visual__eng wow fadeInUp"><?=${nav_.$P_dp1._en}?></p>
+		<h1 class="sub-visual__title wow fadeInUp" style="animation-delay: 0.2s"><?=${nav_.$P_dp1}?></h1>
+		<?}else{?>
+		<p class="sub-visual__eng wow fadeInUp"><?=${nav_.$P_dp1._.$P_dp2._en}?></p>
+		<h1 class="sub-visual__title wow fadeInUp" style="animation-delay: 0.2s"><?=${nav_.$P_dp1._.$P_dp2}?></h1>
+		<?}?>
+	</div>
+</div>
+<?}?>

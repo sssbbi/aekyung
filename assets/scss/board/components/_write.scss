@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.board-form-wrap {
+  width: 100%;
+}
+
+.board-form-list {
+  .board-form-item + .board-form-item {
+    margin-top: em(32);
+  }
+}
+
+.board-form-table {
+  width: 100%;
+  table-layout: fixed;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  
+  th, td {
+    text-align: left;
+    vertical-align: middle;
+    padding: em(12);
+  }
+
+  th {
+    font-weight: 500;
+  }
+}
+
+@import "write/write_a";

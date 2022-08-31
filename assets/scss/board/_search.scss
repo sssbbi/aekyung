@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+$board-search-padding-x:            0;         // 좌우 여백
+$board-search-padding-y:            em(16);    // 상하 여백
+$board-search-spacing:              em(8);     // select, input, button 간격
+
+$board-search-border-color:         #ddd;    // select, input, button border 색상
+$board-search-border-radius:        0;         // select, input, button border-radius
+
+$board-search-form-height:          em(40);    // select, input, button 높이
+
+$board-search-select-width:         em(100);   // select 너비
+$board-search-select-padding-x:     em(12);    // select 좌우 여백
+
+$board-search-input-width:          em(220);   // input 너비
+$board-search-input-padding-x:      em(12);    // input 좌우 여백
+
+$board-search-button-width:         em(90);    // 버튼 너비
+$board-search-button-padding-x:     em(12);    // 버튼 좌우 여백
+$board-search-button-color:         #333;    // 버튼 텍스트 색상
+$board-search-button-hover-color:   #333;    // 버튼 텍스트 hover 색상
+$board-search-button-bg-color:      #f6f6f6; // 버튼 배경색
+$board-search-button-bg-hover-color:#f6f6f6; // 버튼 hover 배경색
+
+
+.board-search {
+  position: relative;
+  margin-top: em(28);
+  padding: $board-search-padding-y 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  &__select {
+    float: left;
+    width: 30%;
+    padding-left: $board-search-select-padding-x;
+    padding-right: $board-search-select-padding-x + em(16);
+    height: $board-search-form-height;
+    border: 1px solid $board-search-border-color;
+    border-radius: $board-search-border-radius;
+    appearance: none;
+    background: {
+      image: url(../images/icon/select_icon_2x.png);
+      repeat: no-repeat;
+      position: right $board-search-select-padding-x center;
+      size: em(12) auto;
+    };
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  &__input {
+    float: right;
+    width: calc(70% - #{$board-search-spacing});
+    height: $board-search-form-height;
+    margin-left: $board-search-spacing;
+    padding: 0 $board-search-input-padding-x;
+    border: 1px solid $board-search-border-color;
+    border-radius: $board-search-border-radius;
+  }
+
+  &__btn {
+    flex: 1 0 100%;
+    width: 100%;
+    height: $board-search-form-height;
+    color: $board-search-button-color;
+    padding: 0 $board-search-button-padding-x;
+    border: 1px solid $board-search-border-color;
+    background-color: $board-search-button-bg-color;
+    cursor: pointer;
+    margin-top: $board-search-spacing;
+
+    &:hover {
+      color: $board-search-button-hover-color;
+      background-color: $board-search-button-bg-hover-color;
+    }
+  }
+
+  @include mdq-min(lg) {
+    margin-top: em(60);
+      
+    &__form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__select {
+      flex: 0 0 $board-search-select-width;
+      width: $board-search-select-width;
+      background-image: url(../images/icon/select_icon.png);
+    }
+
+    &__input {
+      flex: 0 0 $board-search-input-width;
+      width: $board-search-input-width;
+    }
+
+    &__btn {
+      flex: 0 0 $board-search-button-width;
+      width: $board-search-button-width;
+      margin-top: 0;
+      margin-left: $board-search-spacing;
+    }
+  }
+}
+
+//@media screen and (max-width: 1024px) {
+//  .board-search-01 {
+//    margin-top: 30px;
+//  }
+//}
+
+//@media screen and (max-width: 570px) {
+//  .board-search-01.type_c {
+//    .select-type-01 {
+//      top: 65px;
+//
+//      &.first {
+//        position: static;
+//        width: 100%;
+//        margin-bottom: 5px;
+//      }
+//    }
+//
+//    .btn-color-01 {
+//      top: 65px;
+//    }
+//  }
+//}
+//
+//@media screen and (max-width: 570px) {
+//  .board-search-01 .select-type-01 {
+//    width: 21%;
+//    position: absolute;
+//    top: 15px;
+//    left: 0;
+//  }
+//}
+//
+//@media screen and (max-width: 570px) {
+//  .board-search-01 .input-type-01 {
+//    margin: 0 22% 0 22%;
+//    width: 56%;
+//  }
+//}
+//
+//@media screen and (max-width: 570px) {
+//  .board-search-01 .btn-color-01 {
+//    width: 21%;
+//    position: absolute;
+//    top: 15px;
+//    right: 0;
+//  }
+//}

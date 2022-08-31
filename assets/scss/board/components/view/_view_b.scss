@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+// 
+// 파일첨부 true/false 변수 사용을 위한 mixin import.
+// @if(){} 문 안에서 @import 구문 사용이 불가능함.
+// 
+@import "view-attachment";
+
+// 
+// 변수 목록
+// 
+
+$board-view-border-top-width:       1px;     // 테이블 상단 테두리 두께
+$board-view-border-top-style:       solid;   // 테이블 상단 테두리 스타일
+$board-view-border-top-color:     #000;    // 테이블 상단 테두리 색상
+
+$board-view-border-bottom-width:    1px;     // 테이블 하단 테두리 두께
+$board-view-border-bottom-style:    solid;   // 테이블 하단 테두리 스타일
+$board-view-border-bottom-color:   #ddd;   // 테이블 하단 테두리 색상
+
+$board-view-cell-border-width:        1px;     // 테이블 헤더셀(th) 테두리 두께
+$board-view-cell-border-style:        solid;   // 테이블 헤더셀(th) 테두리 스타일
+$board-view-cell-border-color:      #ddd;    // 테이블 헤더셀(th) 테두리 색상
+
+$board-view-th-bg-color:          #f6f6f6;
+
+$board-view-th-font-weight:         500;     // 테이블 헤더셀(th) 폰트 두께
+
+$board-view-padding-x:              em(12);  // 테이블 셀 좌우여백
+$board-view-padding-y:              em(12);  // 테이블 셀 상하여백
+
+$board-view-view-content:           150px;   // 에디터 영역 최소 높이
+
+$board-view-cell-height:            em(48);  // PC에서 테이블 셀 높이
+
+$board-view-attachment-enable:      false;    // 첨부파일 스타일 사용여부 변수
+
+// 첨부파일 스타일 사용여부 판단
+@if ( $board-view-attachment-enable ){
+  @include board-view-attachment;
+}
+
+// 
+// a type
+// 
+.board-view-wrap__b {
+  .board-view {
+    border-top: $board-view-border-top-width $board-view-border-top-style $board-view-border-top-color;
+    border-bottom: $board-view-border-top-width $board-view-border-top-style $board-view-border-top-color;
+
+    tr {
+      th, td {
+        padding: $board-view-padding-x $board-view-padding-y;
+        text-align: left;
+        border-bottom: $board-view-cell-border-width $board-view-cell-border-style $board-view-cell-border-color;
+      }
+
+      th {
+        font-weight: $board-view-th-font-weight;
+        background-color: $board-view-th-bg-color;
+      }
+    }
+
+    &-content {
+      min-height: $board-view-view-content;
+    }
+
+    @include mdq-min(lg) {
+      tr {
+        th, td {
+          height: $board-view-cell-height;
+        }
+      }
+    }
+
+    @include mdq-max(lg) {
+      &, thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

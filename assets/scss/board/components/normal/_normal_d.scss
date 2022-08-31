@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+// 일반게시판 타입 D
+
+.board-normal {
+  &.board-normal__d {
+    td {
+      &:nth-child(2) {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+
+      &:nth-child(n+3) {
+        margin-top: em(8, 14);
+        font-size: em(14);
+      }
+
+      &:nth-child(n+4) {
+        margin-left: em(8, 14);
+      }
+    }  
+    
+    @include mdq-min(lg) {
+      td {
+        &:nth-child(n+3) {
+          font-size: em(16);
+        }
+      }
+    }
+  }
+}

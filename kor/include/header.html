@@ -1,0 +1,173 @@
+<ul class="skip">
+  <li><a class="link" href="#contents">본문내용 바로가기</a></li>
+  <li><a class="link" href="#header">헤더 바로가기</a></li>
+  <li><a class="link" href="#footer">푸터 바로가기</a></li>
+</ul>
+
+<header id="header" class="header">
+  <div class="header-wrap">
+    <a href="../main/main.html" class="logo d-inline-flex align-items-center h-100" title="메인으로">
+      <img class="logo-img" src="../../assets/images/main/logo.svg" alt="<?=$SS[sitename]?>" />
+      <img class="logo-img logo-img--white" src="../../assets/images/main/logo-white.svg" alt="<?=$SS[sitename]?>" />
+    </a>
+    <div class="nav__bg"></div>
+    <!-- S : navigation -->
+    <nav class="nav">
+      <? include "../include/nav.html" ?>
+    </nav>
+    <!-- E : navigation -->
+
+    <div class="header-util">
+      <div class="language-bx d-none d-lg-flex">
+        <a href="javascript:void(0);" class="language-bx__btn on">KOR</a>
+        <!-- FIXME: 다국어 링크 -->
+        <div class="language-bx__list">
+          <a onclick="alert('준비 중 입니다.\nComing Soon.');return false;" href="../eng/main/main.html" class="btn">ENG</a>
+          <a onclick="alert('준비 중 입니다.\nComing Soon.');return false;" href="../chn/main/main.html" class="btn">CHN</a>
+          <a onclick="alert('준비 중 입니다.\nComing Soon.');return false;" href="../jpn/main/main.html" class="btn">JPN</a>
+        </div>
+        <!-- FIXME: 다국어 링크 -->
+      </div>
+
+      <?if($P_dp1=='search'){?>
+      <button class="product-search-btn" type="button" onclick="location.href='../search/product.html'">
+        <span class="d-none d-lg-block">제품검색</span>
+        <i class="img"></i>
+      </button>
+      <?}else{?>
+      <button class="product-search-btn __function" type="button" title="제품검색 창 열기">
+        <span class="d-none d-lg-block">제품검색</span>
+        <i class="img"></i>
+      </button>
+      <?}?>
+    </div>
+
+    <button type="button" class="nav-all__btn hamburger hamburger--spin" title="전체메뉴 보기">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </button>
+
+    <button class="nav-mobile__btn" type="button" title="네비게이션 열기">
+      <i class="xi-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- S: 사이트맵: 전체메뉴 -->
+<aside class="nav-all">
+  <!-- <button class="nav-all__close" type="button" title="전체메뉴 닫기">
+    <i class="xi-close-thin"></i>
+  </button> -->
+  <? include "../include/nav.html" ?>
+</aside>
+<!-- E: 사이트맵: 전체메뉴 -->
+
+<!-- S: 제품검색영역 -->
+<div class="product-search__bg"></div>
+<aside class="product-search">
+  <h1 class="sr-only">제품검색영역 입니다</h1>
+  <form action="../search/product.html">
+    <!-- 각 detph를 선택하면 :
+    1. 다음 선택지 내부를 refresh 해줍니다. 영역 각 스텝별로 두가지(pc,m) [.select, .product-search__content.scrollbar-outer ] (@개발 추가 필요)
+    2. product-search__content-blank 를 감추고 product-search__content를 보여줍니다(퍼블, pc에서만) -->
+    <div class="d-flex flex-wrap">
+      <div class="product-search__depth product-search__depth--1">
+        <h2 class="title"><span class="text-color-1">01.</span> 사업분야 선택</h2>
+        <div class="d-none d-md-block">
+          <div class="product-search__content scrollbar-outer d-block">
+            <!-- FIXME: #list: pc -->
+            <button type="button" value="가소제 분야" class="btn">가소제 분야</button>
+            <button type="button" value="합성수지 분야" class="btn">합성수지 분야</button>
+            <button type="button" value="생활화학 분야" class="btn">생활화학 분야</button>
+            <button type="button" value="친환경/바이오 분야" class="btn">친환경/바이오 분야</button>
+          </div>
+        </div>
+        <div class="d-block d-md-none">
+          <!-- FIXME: #list-mobile -->
+          <select name="" id="" class="select">
+            <option selected disabled>사업분야를 선택하세요.</option>
+            <option value="가소제 분야">가소제 분야</option>
+            <option value="합성수지 분야">합성수지 분야</option>
+            <option value="생활화학 분야">생활화학 분야</option>
+            <option value="친환경/바이오 분야">친환경/바이오 분야</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-search__depth product-search__depth--2">
+        <h2 class="title"><span class="text-color-1">02.</span> 제품명 선택</h2>
+        <div class="d-none d-md-block">
+          <div class="product-search__content scrollbar-outer d-none">
+            <!-- FIXME: #list: pc -->
+            <button type="button" class="btn">제품명1</button>
+            <button type="button" class="btn">제품명2</button>
+            <button type="button" class="btn">제품명3</button>
+            <button type="button" class="btn">제품명4</button>
+            <button type="button" class="btn">제품명5</button>
+            <button type="button" class="btn">제품명6</button>
+            <button type="button" class="btn">제품명7</button>
+          </div>
+          <div class="product-search__content product-search__content--blank">
+            <img src="../../assets/images/main/product-search-blank.svg" alt="" />
+            <p class="text"><span class="text-color-1">사업분야</span>를 선택해주세요.</p>
+          </div>
+        </div>
+        <div class="d-block d-md-none">
+          <!-- FIXME: #list-mobile -->
+          <select name="" id="" class="select">
+            <option selected disabled>제품명을 선택하세요.</option>
+            <option value="제품명1">제품명1</option>
+            <option value="제품명2">제품명2</option>
+            <option value="제품명3">제품명3</option>
+            <option value="제품명4">제품명4</option>
+            <option value="제품명5">제품명5</option>
+            <option value="제품명6">제품명6</option>
+            <option value="제품명7">제품명7</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-search__depth product-search__depth--3">
+        <h2 class="title"><span class="text-color-1">03.</span> 제품용도 선택</h2>
+        <div class="d-none d-md-block">
+          <div class="product-search__content scrollbar-outer d-none">
+            <!-- FIXME: #list: pc -->
+            <button type="button" class="btn">제품용도1</button>
+            <button type="button" class="btn">제품용도2</button>
+            <button type="button" class="btn">제품용도3</button>
+            <button type="button" class="btn">제품용도4</button>
+            <button type="button" class="btn">제품용도5</button>
+            <button type="button" class="btn">제품용도6</button>
+            <button type="button" class="btn">제품용도7</button>
+          </div>
+          <div class="product-search__content product-search__content--blank">
+            <img src="../../assets/images/main/product-search-blank.svg" alt="" />
+            <p class="text"><span class="text-color-1">제품명</span>를 선택해주세요.</p>
+          </div>
+        </div>
+        <div class="d-block d-md-none">
+          <!-- FIXME: #list-mobile -->
+          <select name="" id="" class="select">
+            <option selected disabled>제품용도를 선택하세요.</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-search__input">
+        <input class="input" name="text" type="text" placeholder="제품명, 제품번호, 용도를 입력해주세요. (예 : 가소제, UV수지)" />
+        <small class="small d-block d-md-none text-white w-100">제품명, 제품번호, 용도를 입력해주세요. (예 : 가소제, UV수지)</small>
+        <button class="btn btn--reset" type="reset"><i class="xi-refresh mr-1"></i>초기화</button>
+        <button class="btn btn--sumbit" type="submit">검색</button>
+      </div>
+    </div>
+  </form>
+</aside>
+<!-- E: 제품검색영역 -->
+
+<!-- S : mobile navigation -->
+<? include "../include/aside.html" ?>
+<!-- E : mobile navigation -->
+
+<!-- S : loading image -->
+<div class="loading-image">
+  <img src="../../assets/images/icon/loading.svg" alt="" />
+</div>
+<!-- E : loading image -->

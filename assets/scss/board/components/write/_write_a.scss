@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.board-form-wrap__a {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+  border-radius: 20px;
+
+  .board-form-input,
+  .board-form-textarea {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    
+    &::placeholder {
+      color: #999;
+    }
+
+    &:focus {
+      outline: 0;
+      border-bottom-color: $color-1;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    }
+  }
+
+  @include mdq-min(lg) {
+    padding: 80px;
+  }
+}

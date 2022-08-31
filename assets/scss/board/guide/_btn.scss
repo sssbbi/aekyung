@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.board-guide-btn-group {
+  margin-top: 50px;
+  text-align: right;
+}
+
+.board-guide-btn {
+  display: inline-block;
+  padding: 12px 16px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #666;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    background-color: #ddd;
+  }
+}

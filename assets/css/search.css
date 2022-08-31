@@ -1,0 +1,126 @@
+/* Made by Masstige */
+.product-list {
+  border-bottom: 1px solid #ddd;
+}
+.product-list-wrap {
+  border-top: 2px solid #111;
+}
+.product-list .inner {
+  padding: 2.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.product-list .inner:hover .more i {
+  transform: translateX(7px);
+}
+.product-list .inner:hover .product-list__img .hover-bx {
+  transform: scale(1);
+  opacity: 1;
+}
+.product-list__img {
+  flex: 0 0 17.8125em;
+  max-width: 17.8125em;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.product-list__img::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.product-list__img > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  max-width: none;
+  max-height: none;
+  transform: translate(-50%, -50%) scale(0.1);
+}
+.product-list__img .hover-bx {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1.5625rem;
+  margin-top: -1.5625rem;
+  transform: scale(0.5);
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: 10;
+}
+.product-list__img .hover-bx .xi-search {
+  width: 3.125rem;
+  height: 3.125rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  color: #005baa;
+  font-size: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-list__info {
+  flex: 1 1 auto;
+  width: 1%;
+  padding-left: 3.125em;
+  letter-spacing: -0.02em;
+}
+.product-list__info .category {
+  font-size: 0.9375rem;
+}
+.product-list__info .title {
+  font-size: 2.8125em;
+  font-family: "MavenPro", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1;
+}
+.product-list__info .description {
+  font-weight: 300;
+  color: #666;
+}
+.product-list__info .more {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+.product-list__info .more i {
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .product-list .inner {
+    padding: 1.5625em 0;
+  }
+  .product-list__img {
+    flex: 0 0 12.5em;
+    max-width: 12.5em;
+  }
+  .product-list__info {
+    padding-left: 1.875em;
+  }
+  .product-list__info .category {
+    font-size: 0.9375rem;
+  }
+  .product-list__info .title {
+    font-size: 2.1875em;
+  }
+  .product-list__info .more {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .product-list__img {
+    flex: 0 0 8.125em;
+    max-width: 8.125em;
+  }
+  .product-list__info {
+    padding-left: 1.25em;
+  }
+  .product-list__info .title {
+    font-size: 1.875em;
+  }
+}
+/*# sourceMappingURL=search.css.map */

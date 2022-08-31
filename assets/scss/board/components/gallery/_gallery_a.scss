@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+$board-gallery-columns:                 3, 4, 5, 6, 7 ;  // columns 갯수 목록 ( * 선언된 갯수별로 .board-gallery-list__3 과 같이 클래스 생성. )
+$board-gallery-spacing:                 14px;     // 상하좌우 여백
+
+$board-gallery-border-width:            1px;      // 기본 border 두께
+$board-gallery-border-style:            solid;    // 기본 border 스타일
+$board-gallery-border-color:          #ddd;     // 기본 border 색상
+
+$board-gallery-thumb-width:             500;      // 썸네일 너비 ( 사이즈 입력시 비율로 계산하여 삽입. )
+$board-gallery-thumb-height:            375;      // 썸네일 높이 ( 사이즈 입력시 비율로 계산하여 삽입. )
+$board-gallery-img-bg-size:             'cover';  // 배경 size ( cover, contain )
+
+$board-gallery-desc-padding-y:          16px;     // 내용영역 상하여백
+$board-gallery-desc-padding-x:          16px;     // 내용영역 좌우여백
+
+$board-gallery-title-color:           #333;     // 타이틀 폰트 색상
+$board-gallery-title-font-size:         em(18);   // 타이틀 폰트 크기
+$board-gallery-title-font-weight:       500;      // 타이틀 폰트 두께
+$board-gallery-title-ellipsis-line:     1;        // 타이틀 말줄임 줄 갯수
+
+$board-gallery-text-color:            #999;     // 요약설명 폰트 색상
+$board-gallery-text-font-size:          em(14);   // 요약설명 폰트 크기
+$board-gallery-text-font-weight:        400;      // 요약설명 폰트 두께
+$board-gallery-text-ellipsis-line:      2;        // 요약설명 말줄임 줄 갯수
+$board-gallery-text-margin-top:         em(10,14);// 요약설명 상단 간격 ( 타이틀과의 간격 )
+
+$board-gallery-name-color:            #999;     // 작성자 폰트 색상
+$board-gallery-name-font-size:          em(14);   // 작성자 폰트 크기
+$board-gallery-name-font-weight:        400;      // 작성자 폰트 두계
+$board-gallery-name-margin-top:         em(10,14);// 작성자 상단 간격 ( 설명텍스트와의 간격 )
+$board-gallery-name-margin-right:       em(10,14);// 작성자 상단 간격 ( 설명텍스트와의 간격 )
+
+$board-gallery-date-color:            #999;     // 작성일 폰트 색상
+$board-gallery-date-font-size:          em(14);   // 작성일 폰트 크기
+$board-gallery-date-font-weight:        400;      // 작성일 폰트 두계
+$board-gallery-date-margin-top:         em(10,14);// 작성일 상단 간격 ( 설명텍스트와의 간격 )
+$board-gallery-date-margin-right:       em(10,14);// 작성일 상단 간격 ( 설명텍스트와의 간격 )
+
+$board-gallery-count-color:            #999;     // 조회수 폰트 색상
+$board-gallery-count-font-size:          em(14);   // 조회수 폰트 크기
+$board-gallery-count-font-weight:        400;      // 조회수 폰트 두계
+$board-gallery-count-margin-top:         em(10,14);// 조회수 상단 간격 ( 설명텍스트와의 간격 )
+$board-gallery-count-margin-right:       em(10,14);// 조회수 상단 간격 ( 설명텍스트와의 간격 )
+
+// hover 효과
+$board-gallery-hover-line:              false;    // hover 시 라인 효과 사용여부
+$board-gallery-hover-line-width:        5px;      // hover 시 라인 두께
+$board-gallery-hover-line-color:        $color-1; // hover 시 라인 색상
+
+$board-gallery-hover-thumb-more:        true;         // hover 시 썸네일에 텍스트 출력 효과 사용 여부
+$board-gallery-hover-thumb-more-text:   'MORE VIEW';  // hover 시 썸네일에 출력되는 텍스트 내용
+
+.board-gallery-wrap__a {
+  .board-gallery {
+    &-list {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin: $board-gallery-spacing*-1;
+      padding-top: $board-gallery-spacing;
+    }
+  
+    &-item {
+      padding: $board-gallery-spacing;
+    }
+  
+    @each $column in $board-gallery-columns {
+      &-list.board-gallery-list__#{$column} {
+        .board-gallery-item {
+          flex: 1 0 percentage($number: 1/$column);
+          max-width: percentage($number: 1/$column);
+        }
+      }
+    }
+
+    @include mdq-max(lg) {
+      &-list {
+        margin: ($board-gallery-spacing/2)*-1;
+        padding-top: ($board-gallery-spacing/2);
+      }
+
+      &-item {
+        flex: 1 0 percentage($number: 1/2) !important;
+        max-width: percentage($number: 1/2) !important;
+        padding: ($board-gallery-spacing/2) !important;
+      }
+    }
+
+    @include mdq-max(sm) {
+      &-item {
+        flex: 1 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  
+    &-link {
+      display: block;
+      border: $board-gallery-border-width $board-gallery-border-style $board-gallery-border-color;
+      box-sizing: border-box;
+  
+      @if ( $board-gallery-hover-line == true ) {
+        @include mdq-min(lg) {
+          position: relative;
+  
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border: 0 solid $board-gallery-hover-line-color;
+            transition: all .3s ease-in-out;
+            box-sizing: border-box;
+          }
+    
+          &:hover {
+            &::before {
+              border-width: $board-gallery-hover-line-width;
+            }
+          }
+        }
+      }
+  
+      @if ( $board-gallery-hover-thumb-more == true ) {
+        @include mdq-min(lg) {
+          .board-gallery-thumb {
+            &::before {
+              content: $board-gallery-hover-thumb-more-text;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 0;
+              overflow: hidden;
+              color: #ffffff;
+              background-color: rgba(#000,0.7);
+              transition: all .3s ease-in-out;
+              z-index: 1;
+            }
+    
+            &:hover::before {
+              bottom: 0;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  
+    &-thumb {
+      position: relative;
+      overflow: hidden;
+      
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: percentage($number: $board-gallery-thumb-height/$board-gallery-thumb-width);
+      }
+    }
+  
+    &-img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+  
+      @if ( $board-gallery-img-bg-size == 'cover' ) {
+        transform: translate(-50%, -50%) scale(0.1);
+        min-width: 1000%;
+        min-height: 1000%;
+        max-width: none;
+        max-height: none;
+      } @else if ( $board-gallery-img-bg-size == 'contain' ) {
+        transform: translate(-50%, -50%);
+        min-width: 0;
+        min-height: 0;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  
+    &-desc {
+      padding: $board-gallery-desc-padding-y $board-gallery-desc-padding-x;
+    }
+
+    &-title {
+      font-size: $board-gallery-title-font-size;
+      font-weight: $board-gallery-title-font-weight;
+      @include text-truncate($board-gallery-title-ellipsis-line);
+    }
+  
+    &-text {
+      font-size: $board-gallery-text-font-size;
+      font-weight: $board-gallery-text-font-weight;
+      margin-top: $board-gallery-text-margin-top;
+      color: $board-gallery-text-color;
+      @include text-truncate($board-gallery-text-ellipsis-line);
+    }
+
+    &-name {
+      font-size: $board-gallery-name-font-size;
+      font-weight: $board-gallery-name-font-weight;
+      margin-top: $board-gallery-name-margin-top;
+      margin-right: $board-gallery-name-margin-right;
+      color: $board-gallery-name-color;
+    }
+  
+    &-date {
+      font-size: $board-gallery-date-font-size;
+      font-weight: $board-gallery-date-font-weight;
+      margin-top: $board-gallery-date-margin-top;
+      margin-right: $board-gallery-date-margin-right;
+      color: $board-gallery-date-color;
+    }
+
+    &-count {
+      font-size: $board-gallery-count-font-size;
+      font-weight: $board-gallery-count-font-weight;
+      margin-top: $board-gallery-count-margin-top;
+      margin-right: $board-gallery-count-margin-right;
+      color: $board-gallery-count-color;
+    }
+  }
+}

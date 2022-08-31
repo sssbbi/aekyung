@@ -1,0 +1,58 @@
+<footer id="footer" class="footer">
+  <div class="container-fluid footer__wrap">
+    <ul class="bar-span policy-list">
+      <!-- <li class="px-2"><a href="../policy/term.html" class="link">이용약관</a></li> -->
+      <li class="bar-span__txt"><a href="../policy/privacy.html" class="link text-white">개인정보처리방침</a></li>
+      <li class="bar-span__txt"><a href="../policy/email-security.html" class="link text-white">이메일무단수집거부</a></li>
+    </ul>
+
+    <div class="footer__txt">
+      <p class="bar-span">
+        <span class="bar-span__txt h6 text-white"><?=$SS[sitename]?></span>
+      </p>
+      <p class="bar-span mt-md-3">
+        <span class="bar-span__txt"><?=$P_addr1?></span>
+        <span class="bar-span__txt">
+          대표번호
+          <?=$SS[sitetel]?>
+        </span>
+        <span class="bar-span__txt">
+          FAX
+          <?=$P_fax1?>
+        </span>
+        <span class="bar-span__txt">
+          <?=$SS[sitecopyright]?>
+          <a href="https://www.masstige.biz/main/main.html" target="_blank" title="새창에서 열기" class="d-inline-block" style="color: #343c45">Created By Masstige.</a>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <aside class="quick-menu">
+    <div class="sns-link">
+      <a href="<?=$P_sns_facebook?>" target="_blank" class="link" title="페이스북 바로가기"><img src="../../assets/images/main/sns-facebook.svg" alt="" /></a>
+      <a href="<?=$P_sns_instagram?>" target="_blank" class="link" title="인스타그램 바로가기"><img src="../../assets/images/main/sns-instagram.svg" alt="" /></a>
+    </div>
+    <button
+      type="button"
+      class="sns-link__btn btn"
+      title="퀵메뉴 열기"
+      onclick="
+    $('.sns-link').fadeToggle();
+    $('.quick-menu').toggleClass('active');
+    $(this).attr('title', function(index, attr){return attr == '퀵메뉴 열기' ? '퀵메뉴 닫기' : '퀵메뉴 열기';});"
+    >
+      <i class="xi-plus"></i>
+    </button>
+
+    <? if ($P_dp0 == 'main') {?>
+    <a href="#index" class="top-btn btn" title="최상단으로">
+      <i class="xi-angle-up"></i>
+    </a>
+    <?}else{?>
+    <button class="top-btn btn" title="최상단으로" onclick="$('html,body').stop().animate({scrollTop:$('body').offset().top},500);">
+      <i class="xi-angle-up"></i>
+    </button>
+    <?}?>
+  </aside>
+</footer>

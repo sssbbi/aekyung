@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+//
+// Guide for board template
+//
+@import 'board/guide';
+
+//
+// FORMS ( Input, Select, Button, ... )
+//
+@import 'board/form';
+
+//
+// PAGINATION
+//
+@import 'board/pagination';
+
+//
+// SEARCH
+//
+@import 'board/search';
+
+//
+// COMPONENTS by board type ( list, view, inquiry, ... )
+//
+@import 'board/components/gallery'; // ( == .img_borad_list )
+@import 'board/components/write'; // ( == .table-form-01 )
+@import 'board/components/normal'; // ( == .table_board_for )
+@import 'board/components/view'; // ( == .table-view-00 )
+@import 'board/components/qna'; // ( == .form_wrap )
+@import 'board/components/reply'; // ( == .board-reply )
+@import 'board/components/faq'; // ( == .board-faq )
+
+//
+// COMPONENTS by relative elements
+//
+@import 'board/components/buttons'; // ( == .btn )
+@import 'board/components/forms'; // ( == .forms )
+@import 'board/components/shortcut'; // ( == .border-list-type )

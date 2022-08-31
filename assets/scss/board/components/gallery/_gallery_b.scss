@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+$board-thumbnail-border-width:            1px;      // 테두리 두께
+$board-thumbnail-border-style:            solid;    // 테두리 스타일
+$board-thumbnail-border-color:          #ddd;     // 테두리 색상
+
+$board-thumbnail-padding-x:               0;        // 리스트 아이템 좌우여백
+$board-thumbnail-padding-y:               em(16);   // 리스트 아이템 상하여백
+
+$board-thumbnail-thumb-width:             260;      // 썸네일 너비
+$board-thumbnail-thumb-height:            174;      // 썸네일 높이
+$board-thumbnail-img-bg-size:             'cover';  // 배경 사이즈 ( ex. cover, contain )
+
+$board-thumbnail-info-margin-top:         em(10);
+
+$board-thumbnail-title-color:           #333;     // 타이틀 폰트 색상
+$board-thumbnail-title-font-size:         em(18);   // 타이틀 폰트 크기
+$board-thumbnail-title-font-weight:       500;      // 타이틀 폰트 두께
+$board-thumbnail-title-ellipsis-line:     1;        // 타이틀 말줄임 줄 갯수
+
+$board-thumbnail-text-color:            #999;     // 요약설명 폰트 색상
+$board-thumbnail-text-font-size:          em(14);   // 요약설명 폰트 크기
+$board-thumbnail-text-font-weight:        400;      // 요약설명 폰트 두께
+$board-thumbnail-text-ellipsis-line:      2;        // 요약설명 말줄임 줄 갯수
+$board-thumbnail-text-margin-top:         em(10,14);// 요약설명 상단 간격 ( 타이틀과의 간격 )
+
+$board-thumbnail-name-color:            #999;     // 작성자 폰트 색상
+$board-thumbnail-name-font-size:          em(14);   // 작성자 폰트 크기
+$board-thumbnail-name-font-weight:        400;      // 작성자 폰트 두계
+$board-thumbnail-name-margin-top:         em(10,14);// 작성자 상단 간격 ( 설명텍스트와의 간격 )
+$board-thumbnail-name-margin-right:       em(10,14);// 작성자 상단 간격 ( 설명텍스트와의 간격 )
+
+$board-thumbnail-date-color:            #999;     // 작성일 폰트 색상
+$board-thumbnail-date-font-size:          em(14);   // 작성일 폰트 크기
+$board-thumbnail-date-font-weight:        400;      // 작성일 폰트 두계
+$board-thumbnail-date-margin-top:         em(10,14);// 작성일 상단 간격 ( 설명텍스트와의 간격 )
+$board-thumbnail-date-margin-right:       em(10,14);// 작성일 상단 간격 ( 설명텍스트와의 간격 )
+
+$board-thumbnail-count-color:            #999;     // 조회수 폰트 색상
+$board-thumbnail-count-font-size:          em(14);   // 조회수 폰트 크기
+$board-thumbnail-count-font-weight:        400;      // 조회수 폰트 두계
+$board-thumbnail-count-margin-top:         em(10,14);// 조회수 상단 간격 ( 설명텍스트와의 간격 )
+$board-thumbnail-count-margin-right:       em(10,14);// 조회수 상단 간격 ( 설명텍스트와의 간격 )
+
+
+.board-gallery-wrap__b {
+  .board-gallery {
+    &-list {
+      border-top: $board-thumbnail-border-width $board-thumbnail-border-style $board-thumbnail-border-color;
+    }
+
+    &-item {
+      padding: $board-thumbnail-padding-y $board-thumbnail-padding-x;
+      border-bottom: $board-thumbnail-border-width $board-thumbnail-border-style $board-thumbnail-border-color;
+    }
+
+    &-link {
+      display: block;
+
+      @include mdq-min(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+
+    &-thumb {
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        display: block;
+        padding-bottom: percentage($number: $board-thumbnail-thumb-height/$board-thumbnail-thumb-width);
+      }
+
+      @include mdq-min(sm) {
+        flex: 1 0 em(260);
+        max-width: em(260);
+      }
+    }
+  
+    &-img {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: auto;
+  
+      @if ( $board-thumbnail-img-bg-size == 'cover' ) {
+        transform: translate(-50%, -50%) scale(0.1);
+        min-width: 1000%;
+        min-height: 1000%;
+        max-width: none;
+        max-height: none;
+      } @else if ( $board-thumbanil-img-bg-size == 'contain' ) {
+        transform: translate(-50%, -50%);
+        min-width: 0;
+        min-height: 0;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    &-desc {
+      margin-top: em(20);
+
+      @include mdq-min(sm) {
+        flex: 1 1 auto;
+        width: 1%;
+        padding-left: em(30);
+        margin-top: 0;
+      }
+    }
+
+    &-info {
+      margin-top: $board-thumbnail-info-margin-top;
+    }
+
+    &-title {
+      font-size: $board-gallery-title-font-size;
+      font-weight: $board-gallery-title-font-weight;
+      @include text-truncate($board-gallery-title-ellipsis-line);
+    }
+
+    &-text {
+      font-size: $board-thumbnail-text-font-size;
+      font-weight: $board-thumbnail-text-font-weight;
+      margin-top: $board-thumbnail-text-margin-top;
+      color: $board-thumbnail-text-color;
+      @include text-truncate($board-thumbnail-text-ellipsis-line);
+    }
+
+    &-name {
+      font-size: $board-thumbnail-name-font-size;
+      font-weight: $board-thumbnail-name-font-weight;
+      margin-top: $board-thumbnail-name-margin-top;
+      margin-right: $board-thumbnail-name-margin-right;
+      color: $board-thumbnail-name-color;
+    }
+  
+    &-date {
+      font-size: $board-thumbnail-date-font-size;
+      font-weight: $board-thumbnail-date-font-weight;
+      margin-top: $board-thumbnail-date-margin-top;
+      margin-right: $board-thumbnail-date-margin-right;
+      color: $board-thumbnail-date-color;
+    }
+
+    &-count {
+      font-size: $board-thumbnail-count-font-size;
+      font-weight: $board-thumbnail-count-font-weight;
+      margin-top: $board-thumbnail-count-margin-top;
+      margin-right: $board-thumbnail-count-margin-right;
+      color: $board-thumbnail-count-color;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+	<head>
+		<?
+    $P_dp1 = 5;
+    $P_dp2 = 2;
+		$P_dp3 = 2;
+    include "../include/meta.html"
+    ?>
+		<link rel="stylesheet" href="../../assets/css/esg.min.css" />
+	</head>
+	<body class="sub-body esg-new">
+		<? include "../include/header.html" ?>
+		<? include "../include/sub-visual.html" ?>
+		<? include "../include/sub-nav.html" ?>
+
+		<main class="main sub-main" id="contents">
+			<section class="section">
+				<div class="container">
+					<div class="text-center mb-10 mb-md-15">
+						<h1 class="common-title--40 text-sub font-weight-medium">EHS 조직</h1>
+					</div>
+
+					<div class="tab tab--box" data-tab="true" data-tab-order="0" data-tab-active="on" data-tab-index="0" data-css="true">
+						<div class="tab-header mb-20" data-tab-header="">
+							<div class="tab-item">
+								<a class="link" data-tab-item="">경영방침</a>
+							</div>
+							<div class="tab-item">
+								<a class="link" data-tab-item="">조직도</a>
+							</div>
+						</div>
+						<div class="tab-body" data-tab-body="">
+							<div class="tab-content" data-tab-content="">
+								<div class="text-center">
+									<h4 class="common-title--h4 font-weight-light mb-10 mb-md-15">
+										애경케미칼(주)는 모든 임직원 및 지역 사회의 안전과 친환경적 생산활동을 통한<br />
+										환경보존을 위하여 EHS 경영방침을 최우선 경영활동으로 정하고 다음 사항을 적극 실천한다
+									</h4>
+
+									<div class="row-scrollwrap" data-show="800">
+										<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+										<div class="row-scrollwrap__scroll">
+											<div class="row-scrollwrap__content">
+												<img src="../../assets/images/esg/env_img_1.jpg" alt="경영 활동 전반에 EHS를 최우선 고려, EHS 경영시스템 구축 및 지속 개선, EHS 관련 법규 및 규정의 철저한 준수, EHS에 부합하는 업무 환경 구축, 모든 임직원의 EHS 마인드 확립" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-content" data-tab-content="">
+								<div class="row-scrollwrap" data-show="800">
+									<p class="row-scrollwrap__txt"><i class="xi-info-o"></i>가로로 스크롤 하여 보실 수 있습니다.</p>
+									<div class="row-scrollwrap__scroll">
+										<div class="row-scrollwrap__content">
+											<img src="../../assets/images/esg/env__ehs_organization.jpg" alt="조직도" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<? include "../include/footer.html" ?>
+		<? include "../include/js.html" ?>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+// 일반게시판 타입 C
+
+.board-normal {
+  &.board-normal__c {
+    td {
+      &:nth-child(1) {
+        flex: 0 0 auto;
+        width: auto;
+        font-weight: 700;
+        padding-right: em(12);
+      }
+
+      &:nth-child(2) {
+        flex: 0 0 auto;
+        width: auto;
+        box-sizing: border-box;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        font-size: em(14);
+      }
+
+      &:nth-child(3) {
+        flex: 0 0 100%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      &:nth-child(n+3) {
+        margin-top: em(8, 14);
+      }
+
+      &:nth-child(n+4) {
+        font-size: em(14);
+      }
+
+      &:nth-child(n+5) {
+        margin-left: em(8, 14);
+      }
+    }
+
+    @include mdq-min(lg) {
+      td {
+        &:nth-child(2) {
+          border-left: 0;
+        }
+
+        &:nth-child(n+3) {
+          margin-top: 0;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(n+4) {
+          font-size: em(16);
+        }
+
+        &:nth-child(n+5) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

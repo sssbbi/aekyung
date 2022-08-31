@@ -1,0 +1,268 @@
+<? include "../include/head.html" ?>
+<!DOCTYPE html>
+<html lang="<?=$P_lang?>">
+  <head>
+    <?
+    $P_dp1 = 3;
+    $P_dp2 = 3;
+    $P_dp3 = 1;
+    include "../include/meta.html"
+    ?>
+    <link rel="stylesheet" href="../../assets/css/recruit.min.css" />
+  </head>
+  <body class="sub-body recruit">
+    <? include "../include/header.html" ?>
+    <? include "../include/sub-visual.html" ?>
+    <? include "../include/sub-nav.html" ?>
+
+    <main class="main sub-main" id="contents">
+      <section class="section text-center mb-15 mb-md-20">
+        <div class="container">
+          <h1 class="common-title--40 font-weight-medium mb-8"><?=${nav_.$P_dp1._.$P_dp2._.$P_dp3}?></h1>
+
+          <p class="common-text font-weight-light">다양한 직무에 적합한 역량을 갖춘 우수한 인재를 선발하기 위한 채용 절차를 소개합니다.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="tab tab--box" data-tab="true" data-tab-order="0" data-tab-active="on" data-tab-index="0" data-css="true">
+            <div class="tab-header mb-15 mb-md-20" data-tab-header="">
+              <div class="tab-item">
+                <a class="link" data-tab-item="">신입</a>
+              </div>
+              <div class="tab-item">
+                <a class="link" data-tab-item="">경력</a>
+              </div>
+            </div>
+            <div class="tab-body" data-tab-body="">
+              <!-- S : 신입 -->
+              <div class="tab-content" data-tab-content="">
+                <div class="icon-list row mx-n3 mx-xl-n5 mt-n6 mt-n10">
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 01</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_1.png" alt="카드" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">입사 지원</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">
+                        기본 인적사항, 학업/경험/자격,<br />
+                        자기소개서 작성 후 제출<br />(애경케미칼 채용 홈페이지를 통해 접수)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 02</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_2.png" alt="서류" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">서류 전형</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">지원서 제출 정보를 바탕으로 직군별 필요 역량 및 자질 등을 종합적으로 평가</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 03</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_3.png" alt="사람" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">인·적성 검사</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">
+                        지원자의 조직 적응력, 직무 적합성 등을 확인<br />
+                        * 특정직무(연구)의 경우, 전공 지식 수준 파악을 위한 시험이 진행될 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 04</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_4.png" alt="메세지" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">1차 면접</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">
+                        실무진 면접으로 지원 부문의 전문지식 수준과 직무 역량 보유 수준 등을 확인<br />
+                        * 직군에 따라 1차 면접만 진행될 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 05</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_5.png" alt="면접" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">2차 면접</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">임원진 면접으로 지원자의 인성 및 조직 적합성, 잠재력 등을 확인</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 06</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_6.png" alt="검토" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">채용 검진</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">채용 검진 또는 배치 전 특수 검진 진행</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 07</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_1_7.png" alt="카드" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">입사</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">전형 절차 전 과정 리뷰 후 합격자에 한해 오리엔테이션 및 입문교육, OJT 및 수습 진행</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- E : 신입 -->
+
+              <!-- S : 경력 -->
+              <div class="tab-content" data-tab-content="">
+                <div class="icon-list row mx-n3 mx-xl-n5 mt-n6 mt-n10">
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 01</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_1.png" alt="카드" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">입사 지원</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">
+                        기본 인적사항, 학업/경험/자격,<br />
+                        자기소개서 작성 후 제출<br />(애경케미칼 채용 홈페이지를 통해 접수)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 02</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_2.png" alt="서류" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">서류 전형</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">지원서 제출 정보를 바탕으로 직군별 필요 역량 및 자질 등을 종합적으로 평가</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 03</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_3.png" alt="사람" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">인·적성 검사</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">지원자의 조직 적합성을 확인</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 04</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_4.png" alt="메세지" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">1차 면접</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">
+                        실무진 면접으로 지원 부문의 전문지식 수준과 직무 역량 보유 수준 등을 확인<br />
+                        * 직군에 따라 1차 면접만 진행될 수 있습니다.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 05</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_5.png" alt="면접" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">2차 면접</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">임원진 면접으로 지원자의 인성 및 조직 적합성, 잠재력 등을 확인</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 06</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_6.png" alt="검토" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">레퍼런스 체크</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">지원자의 경력 검증을 위해 이전 직장 동료를 활용한 평판조회 진행</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 07</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_7.png" alt="검토" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">채용 검진</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">채용 검진 또는 배치 전 특수 검진 진행</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 08</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_8.png" alt="협의" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">처우 협의</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">지원자의 직급 및 연봉 산정 결과 안내 및 협의 진행</p>
+                    </div>
+                  </div>
+                  <div class="icon-list__item col-12 col-sm-6 col-lg-4 mt-6 mt-xl-10 px-3 px-xl-5">
+                    <div class="border">
+                      <h5 class="common-title--h5 text-color-1 text-sub mb-4">Step. 09</h5>
+
+                      <div class="icon mb-3">
+                        <img src="../../assets/images/recruit/process_i_2_9.png" alt="카드" />
+                      </div>
+
+                      <h5 class="common-title--h5 mb-3">입사</h5>
+                      <p class="common-text--md font-weight-light text-gray-6">전형 절차 전 과정 리뷰 후 합격자에 한해 오리엔테이션 및 입문교육, OJT 및 수습 진행</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- E : 경력 -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <? include "../include/footer.html" ?>
+    <? include "../include/js.html" ?>
+  </body>
+</html>

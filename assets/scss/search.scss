@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+.product-list {
+  border-bottom: 1px solid $gray-d;
+  &-wrap {
+    border-top: 2px solid $gray-1;
+  }
+
+  .inner {
+    padding: em(40) 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &:hover {
+      .more i {
+        transform: translateX(7px);
+      }
+      .product-list__img {
+        .hover-bx {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__img {
+    flex: 0 0 em(285);
+    max-width: em(285);
+    //border: 2px solid rgba($color-1, 0.1);
+    //border-radius: 50%;
+    @include img-to-bg(100%, cover);
+
+    .hover-bx {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: rem(-25);
+      margin-top: rem(-25);
+      transform: scale(0.5);
+      transition: all 0.3s;
+      opacity: 0;
+      z-index: 10;
+
+      .xi-search {
+        width: rem(50);
+        height: rem(50);
+        background: rgba($white, 0.8);
+        border-radius: 50%;
+        color: $color-1;
+        font-size: rem(30);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  &__info {
+    flex: 1 1 auto;
+    width: 1%;
+    padding-left: em(50);
+    letter-spacing: letterSpacing(-20);
+
+    .category {
+      font-size: rem(15);
+    }
+    .title {
+      font-size: em(45);
+      font-family: $font-family-sub;
+      line-height: 1;
+    }
+    .description {
+      font-weight: 300;
+      color: $gray-6;
+    }
+
+    .more {
+      font-size: rem(15);
+      font-weight: 700;
+      i {
+        transition: transform 0.3s;
+      }
+    }
+  }
+
+  @include mdq-max(md) {
+    .inner {
+      padding: em(25) 0;
+    }
+    &__img {
+      flex: 0 0 em(200);
+      max-width: em(200);
+    }
+    &__info {
+      padding-left: em(30);
+      .category {
+        font-size: rem(15);
+      }
+      .title {
+        font-size: em(35);
+      }
+      .more {
+        display: none !important;
+      }
+    }
+  }
+  @include mdq-max(sm) {
+    &__img {
+      flex: 0 0 em(130);
+      max-width: em(130);
+    }
+    &__info {
+      padding-left: em(20);
+      .title {
+        font-size: em(30);
+      }
+    }
+  }
+}

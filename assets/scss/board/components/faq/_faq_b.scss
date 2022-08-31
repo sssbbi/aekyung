@@ -1,0 +1,59 @@
+.board-faq__wrap__b {
+  .board-faq {
+    //우측아이콘 + -
+    &__quest {
+      &:before,
+      &:after {
+        content: '';
+        background-color: #666;
+        height: 2px;
+        width: 14px;
+        position: absolute;
+        right: 22px;
+        top: 50%;
+        margin-top: -1px;
+        transition: all 0.5s;
+      }
+      &:before {
+        transform: rotate(270deg);
+      }
+
+      &:after {
+        transform: rotate(180deg);
+      }
+
+      &.active {
+        &:before {
+          -webkit-transform: rotate(0);
+          transform: rotate(0);
+        }
+      }
+    }
+
+    //좌측아이콘
+    &__quest,
+    &__answer {
+      position: relative;
+      padding: 1rem;
+      padding-left: 3rem;
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 1rem;
+      text-align: center;
+      font-style: normal;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1;
+      &--q {
+        color: $color-1;
+      }
+
+      &--a {
+        color: $color-2;
+      }
+    }
+  }
+}

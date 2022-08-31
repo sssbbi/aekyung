@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+
+html[lang='ja'],
+html[lang='zh'] {
+	word-break: break-all;
+	body {
+		word-break: break-all;
+	}
+
+	.header .language-bx,
+	.history-tab-wrap,
+	.sub-nav--dropdown .sub-nav__home {
+		word-break: keep-all;
+	}
+}
